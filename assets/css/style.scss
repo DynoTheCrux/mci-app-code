@@ -43,6 +43,14 @@ h1.reading:before {
     table.rouge-table td.rouge-gutter pre {
       visibility: hidden;
     }
+
+    table.rouge-table td.rouge-gutter pre:before {
+      content: ">>";
+      /*display: block;
+      width: 10px;
+      height: 12px;*/
+      float: left;
+      /*margin: 0 6px 0 0;*/
   }
 
   table.rouge-table {
