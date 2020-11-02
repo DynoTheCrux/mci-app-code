@@ -12,19 +12,20 @@ Java is used to develop apps for various Desktop Applications, such as media pla
 
 It has also be adopted as the language of choice for Google's **Android** OS, which we will be focus on in this course.
 
----
-
 # Hello World!
 {: reading}
 
-The infamous first example when learning a new programming language is to create a minimal programm which outputs the text `Hello World` on the screen.
+The infamous first example when learning a new programming language is to create a minimal programm which outputs the text `Hello World!` on the screen.
 
 ````java
 class MyClass {
   public static void main(String[] args) {
-    System.out.println("Hello World");
+    System.out.println("Hello World!");
   }
 }
+````
+````
+Hello World!
 ````
 
 In Java, every line of code that can actually run needs to be inside a `class`.
