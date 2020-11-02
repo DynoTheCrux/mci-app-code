@@ -24,7 +24,7 @@ class MyClass {
   }
 }
 ````
-````
+````output
 Hello World!
 ````
 
