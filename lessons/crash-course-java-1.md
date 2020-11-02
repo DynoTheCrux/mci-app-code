@@ -37,7 +37,7 @@ In Java, each application has an **entry point**, or a starting point, which is 
 > - Every program in Java must have a **class**.
 > - Every Java program starts from the **main method**.
 
-## The *main* method
+## The *main* Method
 
 To run our program, the ``main`` method must be identical to this signature:
 
@@ -102,3 +102,87 @@ Java also supports **multi-line comments** (also called *block comment*). You st
 
 # Variables in Java
 {: .reading}
+
+Variables store data for processing.
+A variable is given a name (or **identifier**), such as area, age, height, and the like. The name *uniquely* identifies each variable, assigning a value to the variable and retrieving the value stored.
+
+Variables have **types**. Some examples:
+- ``int``: for integers (whole numbers) such as 42 and -1337
+- ``double``: for floating-point or real numbers with optional decimal points and fractional parts in fixed or scientific notations, such as 3.1416, -67.33.
+- ``String``: for texts such as "Hello" or "Good Morning!". Text strings are enclosed within double quotes `"`. Note 'S' is a capital letter!
+- ``char``: for single characters such as 'a' or 'A'
+- ``boolean``: two possible values `true` and `false`
+
+You can declare a variable of a type and assign it a value (**initialization**):
+````java
+String name = "Alice";
+int answer = 42;
+double pi = 3.14159;
+char c = 'A';
+boolean finished = false;
+````
+
+It is also possible to defer assigning a value to a later time. However, it is important to initialize a variable **before** you can access (read) the variable.
+
+The following code will **not** work
+````java
+String drinks; // not initialized
+int amount = 4;
+
+System.out.println("Let's have " + amount + " " + drinks); // Illegal!
+````
+````plaintext
+error: variable answer might not have been initialized
+````
+
+Let's fix the code by properly initializing the variable ``drinks`` before the first usage:
+````java
+String drinks; // not initialized
+int amount = 4;
+
+drinks = "beers"; // initialization
+System.out.println("Let's have " + amount + " " + drinks);
+````
+````plaintext
+Let's have 4 beers
+````
+
+It is important to note that a variable is associated with a type, and **is only capable of storing values of that particular type**. For example, an ``int`` variable can store integer values, such as ``123``; but it cannot store real numbers, such as ``12.34``, or texts, such as "Hello".
+
+# Operators
+{: .reading}
+
+## Math Operators
+Java provides **operators** to use in manipulating variables. A value used on either side of an operator is called an **operand**.
+For example, in the expression below, the numbers ``4`` and ``5`` are operands of the `+` operator:
+````java
+int x = 4 + 5;
+````
+
+The arithmetic operators `+`, `-`, `*`, `/`, `%` (modulo) work as you would expect in algebraic equations. Just like in algebra, you can use multiple the operations in a single line to write an equation. For example:
+````java
+int val = 10 + 5 - 2;
+````
+The operator priority the same as in mathematics. To force a custom priority, round brackets ``( )`` can be used.
+````java
+int val = 4 * 2 + 5;   // = 8 + 5 = 13
+int val = 4 * (2 + 5); // = 4 * 7 = 28
+int val = ((1 + 2) * (5-3)) / (2 + 3);
+````
+
+## The Modulo Operator
+
+The **modulo** (or remainder) math operation performs an integer division of one value by another, and returns the remainder of that division. The operator for the modulo operation is the percentage character `%`.
+
+````java
+int div = 23 / 6; // integer division is 3
+int rem = 23 % 6; // remainder is 5
+
+System.out.println("23 / 6 is " + div + " with " + rem + " rest.");
+````
+````plaintext
+23 / 6 is 3 with 5 rest.
+````
+[>Try it yourself<]([url](https://repl.it/@m0stlyharmless/MCIAppProgrammingExamples#Crash%20Course%20Java%20I/ExModulo.java)){:target="_blank"}
+
+## Increment Operators
