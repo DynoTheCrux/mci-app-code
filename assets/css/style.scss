@@ -44,13 +44,9 @@ h1.reading:before {
       visibility: hidden;
     }
 
-    table.rouge-table td.rouge-gutter pre:before {
+    table.rouge-table td.rouge-gutter pre.lineno:before {
       content: ">>";
-      /*display: block;
-      width: 10px;
-      height: 12px;*/
-      float: left;
-      /*margin: 0 6px 0 0;*/
+      visibility: visible;
   }
 
   table.rouge-table {
