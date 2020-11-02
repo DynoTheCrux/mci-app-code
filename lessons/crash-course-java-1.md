@@ -19,7 +19,7 @@ It has also be adopted as the language of choice for Google's **Android** OS, wh
 
 The infamous first example when learning a new programming language is to create a minimal programm which outputs the text `Hello World` on the screen.
 
-```` Java
+````java
 class MyClass {
   public static void main(String[] args) {
     System.out.println("Hello World");
@@ -40,7 +40,7 @@ In Java, each application has an **entry point**, or a starting point, which is 
 
 To run our program, the ``main`` method must be identical to this signature:
 
-```` Java
+````java
 public static void main(String[] args)
 ````
 
@@ -54,7 +54,7 @@ Let's dissect this line word by word:
 
 For example, the following code declares a method called ``test``, which does not return anything and has no parameters:
 
-```` Java
+````java
 void test()
 ````
 
@@ -62,7 +62,7 @@ void test()
 
 Next is the [body](# "the collection of statements belonging to a block of code is called it's 'body'") of the main method, enclosed in curly braces ``{ }``:
 
-```` Java
+````java
 {
    System.out.println("Hello World!");
 }
