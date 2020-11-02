@@ -183,6 +183,6 @@ System.out.println("23 / 6 is " + div + " with " + rem + " rest.");
 ````plaintext
 23 / 6 is 3 with 5 rest.
 ````
-[>Try it yourself<]([url](https://repl.it/@m0stlyharmless/MCIAppProgrammingExamples#Crash%20Course%20Java%20I/ExModulo.java)){:target="_blank"}
+[>Try it yourself<](https://repl.it/@m0stlyharmless/MCIAppProgrammingExamples#Crash%20Course%20Java%20I/ExModulo.java){:target="_blank"}
 
 ## Increment Operators
