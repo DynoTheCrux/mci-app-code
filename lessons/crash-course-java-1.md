@@ -61,7 +61,7 @@ void test()
 
 ## System.out.println()
 
-Next is the [body](a "the collection of statements belonging to a block of code is called it's 'body'") of the main method, enclosed in curly braces ``{ }``:
+Next is the [body]("the collection of statements belonging to a block of code is called it's 'body'") of the main method, enclosed in curly braces ``{ }``:
 
 ````java
 {
