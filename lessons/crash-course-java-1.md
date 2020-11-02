@@ -47,7 +47,7 @@ public static void main(String[] args)
 
 Let's dissect this line word by word:
 - ``public``: anyone can access it
-- ``static``: method only exists once for each class and can be accessed without create an [instance](https://en.wikipedia.org/wiki/Instance_(computer_science) "an object is called an instance of a class)") of that class
+- ``static``: method only exists once for each class and can be accessed without create an [instance](https://en.wikipedia.org/wiki/Instance_(computer_science) "an object is called an 'instance' of a class") of that class
 - ``void`` method does not return any value
 - ``main`` name of the method
 - ``String[]`` type of the method's parameter
@@ -61,7 +61,7 @@ void test()
 
 ## System.out.println()
 
-Next is the [body](# "the collection of statements belonging to a block of code is called it's 'body'") of the main method, enclosed in curly braces ``{ }``:
+Next is the [body](a "the collection of statements belonging to a block of code is called it's 'body'") of the main method, enclosed in curly braces ``{ }``:
 
 ````java
 {
