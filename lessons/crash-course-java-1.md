@@ -61,7 +61,7 @@ void test()
 
 ## System.out.println()
 
-Next is the [body]("the collection of statements belonging to a block of code is called it's 'body'") of the main method, enclosed in curly braces ``{ }``:
+Next is the *body* of the main method, enclosed in curly braces ``{ }``:
 
 ````java
 {
@@ -74,3 +74,18 @@ The ``System`` class and its ``out`` stream are used to access the ``println`` m
 > In classes, methods, and other flow-control structures, code is always enclosed in curly braces ``{ }``.
 
 **Note:** In Java, each code statement must end with a semicolon ``;``.
+
+## Comments
+
+The purpose of including comments in your code is to explain what the code is doing.
+Java supports both single and multi-line comments. All characters that appear within a comment are ignored by the Java compiler.
+
+A **single-line comment** starts with two forward slashes ``//`` and continues until it reaches the end of the line.
+
+For example:
+````java
+// This is a single-line comment
+````
+````java
+int ans = 42; // A single-line comment after code
+````
