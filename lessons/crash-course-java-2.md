@@ -5,7 +5,7 @@ In general, commands in a program are called in **sequence**. This does not nece
 
 **Control structures** allow us to divert the program flow according to set conditions. There are two distinct types of control structures: **loops** and **conditionals** (selections).
 
-![Control structures](/assets/img/cc2_prog_flow.gif)
+![Control structures](../assets/img/cc2_prog_flow.gif)
 
 ## Conditional Statements
  
