@@ -47,6 +47,7 @@ h1.reading:before {
     table.rouge-table td.rouge-gutter pre.lineno:before {
       content: ">>";
       visibility: visible;
+      padding: 0 9px;
     }
   }
 
