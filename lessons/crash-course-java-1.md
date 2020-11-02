@@ -89,3 +89,19 @@ For example:
 ````java
 int ans = 42; // A single-line comment after code
 ````
+
+Java also supports **multi-line comments** (also called *block comment*). You start it with ``/*``, and end it with ``*/``.
+
+````java
+/*  This is also a
+    comment spanning
+    multiple lines */
+````
+
+> Adding comments as you write code is a good practice, because they provide clarification and understanding when you need to refer back to it, as well as for others who might need to read it.
+
+### Abbreviation
+The HTML specification
+is maintained by the W3C.
+*[HTML]: Hyper Text Markup Language
+*[W3C]: World Wide Web Consortium
