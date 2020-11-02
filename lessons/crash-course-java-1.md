@@ -250,6 +250,6 @@ lastName = "Dent";
 System.out.println("My name is " + firstName + " " + lastName);
 ````
 ````plaintext
-My name is David Williams
+My name is Arthur Dent
 ````
 [>Try it yourself<](https://repl.it/@m0stlyharmless/MCIAppExStringConc#Main.java){:target="_blank"}
