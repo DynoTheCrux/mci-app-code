@@ -126,3 +126,68 @@ The available logical operators are
 - ``!`` not
 
 > ``!(age > 18)`` reads as "if age is NOT greater than 18".
+
+## Loops
+
+A **loop** statement allows to repeatedly execute a statement or group of statements.
+
+### while Loops
+A **while loop** repeatedly executes a statement as long as a given condition is true.
+
+Generally, the syntax of an ``while`` loop is
+````java
+while(condition) {
+    // Executes repeatedly as long as condition is true
+}
+````
+
+The ``while`` loop checks for the condition. If it evaluates to ``true``, it executes the statements within its body. Then it checks for the statement again and repeats:
+
+````java
+int x = 3;
+
+while(x > 0) {
+   System.out.println(x);
+   x--; // decrements x
+}
+````
+````plaintext
+3
+2
+1
+````
+[>Try it yourself<](https://repl.it/@m0stlyharmless/MCIAppExWhile#Main.java){:target="_blank"}
+
+### for Loops
+Another loop structure is the ``for`` loop. A ``for`` loop allows you to efficiently write a loop that needs to execute a specific number of times.
+
+Generally, the syntax of an ``for`` loop is
+````java
+for(initialization; condition; increment/decrement) {
+    // Executes repeatedly
+}
+````
+
+- **Initialization**: Expression executes **only once** at the beginning of loop
+- **Condition**: Is evaluated **each time** the loop iterates. When the condition evaluates to `false`, the repeat execution stops.
+- **Increment/Decrement**: Executes **after** iteration of the loop.
+
+Notice the semicolon `;` after initialization and condition in the syntax.
+
+The following example prints the numbers 1 through 5:
+````java
+for(int x = 1; x <=5; x++) {
+  System.out.println(x);
+}
+````
+````plaintext
+1
+2
+3
+4
+5
+````
+
+The variable ``x`` is initialized to the value 1, and the loop body repeatedly prints the value of ``x``, until the condition ``x<=5`` becomes ``false``. On each iteration, the statement ``x++`` increments ``x`` by one.
+
+[>Try it yourself<](https://repl.it/@m0stlyharmless/MCIAppExFor#Main.java){:target="_blank"}
