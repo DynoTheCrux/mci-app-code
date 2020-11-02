@@ -27,11 +27,12 @@ class MyClass {
 ````plaintext
 Hello World!
 ````
+[>Try it yourself<](https://repl.it/@m0stlyharmless/MCIAppExHelloWorld#Main.java){:target="_blank"}
 
 In Java, every line of code that can actually run needs to be inside a `class`.
 In our example, we named the class `MyClass`. We will explore the concept of classes in more detail later.
 
-In Java, each application has an **entry point**, or a starting point, which is a [method](https://en.wikipedia.org/wiki/Method_(computer_programming) "a named collection of statements that are grouped together to perform an operation (also called function or procedure)") called `main`. Along with `main`, the keywords `public` and `static` will also be explained later.
+In Java, each application has an **entry point**, or a starting point, which is a [method](https://en.wikipedia.org/wiki/Method_(computer_programming) "a named collection of statements that are grouped together to perform an operation (also called function or procedure)"){:target="_blank"} called `main`. Along with `main`, the keywords `public` and `static` will also be explained later.
 
 > #### As a summary
 > - Every program in Java must have a **class**.
@@ -47,7 +48,7 @@ public static void main(String[] args)
 
 Let's dissect this line word by word:
 - ``public``: anyone can access it
-- ``static``: method only exists once for each class and can be accessed without create an [instance](https://en.wikipedia.org/wiki/Instance_(computer_science) "an object is called an 'instance' of a class") of that class
+- ``static``: method only exists once for each class and can be accessed without create an [instance](https://en.wikipedia.org/wiki/Instance_(computer_science) "an object is called an 'instance' of a class"){:target="_blank"} of that class
 - ``void`` method does not return any value
 - ``main`` name of the method
 - ``String[]`` type of the method's parameter
@@ -146,6 +147,7 @@ System.out.println("Let's have " + amount + " " + drinks);
 ````plaintext
 Let's have 4 beers
 ````
+[>Try it yourself<](https://repl.it/@m0stlyharmless/MCIAppExInit#Main.java){:target="_blank"}
 
 It is important to note that a variable is associated with a type, and **is only capable of storing values of that particular type**. For example, an ``int`` variable can store integer values, such as ``123``; but it cannot store real numbers, such as ``12.34``, or texts, such as "Hello".
 
@@ -183,6 +185,71 @@ System.out.println("23 / 6 is " + div + " with " + rem + " rest.");
 ````plaintext
 23 / 6 is 3 with 5 rest.
 ````
-[>Try it yourself<](https://repl.it/@m0stlyharmless/MCIAppProgrammingExamples#Crash%20Course%20Java%20I/ExModulo.java){:target="_blank"}
+[>Try it yourself<](https://repl.it/@m0stlyharmless/MCIAppExModulo#Main.java){:target="_blank"}
 
 ## Increment Operators
+
+An **increment** or **decrement** operator provides a more convenient and compact way to increase or decrease the value of a variable by **one**.
+For example, the statement ``x=x+1;`` can be simplified to ``x++``;
+
+````java
+int ans = 41;
+ans++; // ans is now 42
+
+System.out.println("The answer to the Ultimate Question of Life, The Universe, and Everything is " + ans + ".");
+````
+````plaintext
+The answer to the Ultimate Question of Life, The Universe, and Everything is 42.
+````
+
+Similarly, the **decrement** operator ``--`` is used to decrease the value of a variable by **one**:
+````java
+int x = 5;
+x--; // x is now 4
+````
+
+## Assignment Operators
+
+We are obviously already familiar with the assigment operator `=`, which assigns a value to a variable.
+
+Java also provides a set of **combined** assignment operators for convenience: `+=`, `-=`, `*=`, `/=` and `%=`. They perform the relevant arithmetic operation **and assign the result** to the variable. Example
+
+````java
+int num1 = 4;
+int num2 = 8;
+
+num2 += num1; // num2 = num2 + num1;
+num2 -= 2;    // num2 = num2 - 2;
+num1 *= 5;    // num1 = num1 * 5;
+num1 /= num2; // num1 = num1 / num2;
+````
+
+# Strings
+{: .reading}
+
+
+A ``String`` is an object that represents a **sequence of characters**.
+For example, "Java" is a string of 4 characters.
+
+````java
+String s = "Java";
+````
+
+> We are allowed to define an empty string. For example, ``String str = "";``
+
+## String Concatenation
+
+in fact, we already used string concatenation. The ``+`` operator between strings adds them together to make a new string. This process is called **concatenation**.
+The resulted string is the first string put together with the second string.
+
+````java
+String firstName, lastName;
+firstName = "Arthur";
+lastName = "Dent";
+
+System.out.println("My name is " + firstName + " " + lastName);
+````
+````plaintext
+My name is David Williams
+````
+[>Try it yourself<](https://repl.it/@m0stlyharmless/MCIAppExStringConc#Main.java){:target="_blank"}
