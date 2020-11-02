@@ -34,8 +34,8 @@ h1.reading:before {
      padding: 16px;
   }
   
-  /* No line numbers visible in output style */
-  div.language-output {
+  /* No line numbers visible in plaintext style */
+  div.language-plaintext {
     table.rouge-table td pre {
       padding: 0px 16px;
     }
