@@ -1,5 +1,5 @@
 # Welcome to Java
-{: reading}
+{: .reading}
 
 **Java** is a high level programming language designed in the 1990s by Sun Microsystems, and is currently owned by Oracle.
 
@@ -13,7 +13,7 @@ Java is used to develop apps for various Desktop Applications, such as media pla
 It has also be adopted as the language of choice for Google's **Android** OS, which we will be focus on in this course.
 
 # Hello World!
-{: reading}
+{: .reading}
 
 The infamous first example when learning a new programming language is to create a minimal programm which outputs the text `Hello World!` on the screen.
 
@@ -100,8 +100,5 @@ Java also supports **multi-line comments** (also called *block comment*). You st
 
 > Adding comments as you write code is a good practice, because they provide clarification and understanding when you need to refer back to it, as well as for others who might need to read it.
 
-### Abbreviation
-The HTML specification
-is maintained by the W3C.
-*[HTML]: Hyper Text Markup Language
-*[W3C]: World Wide Web Consortium
+# Variables in Java
+{: .reading}
