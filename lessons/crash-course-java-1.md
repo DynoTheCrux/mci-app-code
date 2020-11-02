@@ -54,11 +54,7 @@ Let's dissect this line word by word:
 - ``String[]`` type of the method's parameter
 - ``args`` name of the method's parameter
 
-For example, the following code declares a method called ``test``, which does not return anything and has no parameters:
-
-````java
-void test()
-````
+For example, the code `void test()` declares a method called ``test``, which does not return anything and has no parameters:
 
 ## System.out.println()
 
@@ -240,7 +236,7 @@ String s = "Java";
 ## String Concatenation
 
 in fact, we already used string concatenation. The ``+`` operator between strings adds them together to make a new string. This process is called **concatenation**.
-The resulted string is the first string put together with the second string.
+The resulting string is the first string put together with the second string.
 
 ````java
 String firstName, lastName;

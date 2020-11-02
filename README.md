@@ -1,3 +1,3 @@
-# mci-prog2-code
+# mci-app-code
 
-[link to pages](https://rubbaduxxx.github.io/mci-prog2-code/)
+[link to pages](https://rubbaduxxx.github.io/mci-app-code/)
