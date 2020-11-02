@@ -1,0 +1,42 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+.container-lg {
+  max-width: none;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.markdown-body pre.highlight {
+   padding: 16px;
+}
+
+.markdown-body div.language-plaintext pre.highlight {
+   padding: 4px 16px;
+}
+
+.markdown-body table.rouge-table {
+   margin: 0;
+}
+
+.markdown-body table.rouge-table tr {
+  background-color: inherit;
+  border-top: none;
+}
+
+.markdown-body table.rouge-table td {
+  padding: 0px;
+  border: none;
+}
+
+.markdown-body table.rouge-table td.rouge-gutter {
+  border-right: 1px solid #acacac;
+  color: #acacac;
+}
+
+/* No line numbers visible in plaintext */
+.markdown-body div.language-plaintext table.rouge-table td.rouge-gutter pre {
+  visibility: hidden;
+}
