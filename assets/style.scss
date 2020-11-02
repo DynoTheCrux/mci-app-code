@@ -3,40 +3,66 @@
 
 @import "{{ site.theme }}";
 
+/***********************/
+/*         BODY        */
+/***********************/
 .container-lg {
   max-width: none;
   margin-right: 0px;
   margin-left: 0px;
 }
 
-.markdown-body pre.highlight {
-   padding: 16px;
+/***********************/
+/*    HEADER ICONS     */
+/***********************/
+h1.reading:before {
+    /*content: url('https://sakai.mci4me.at/library/editor/ckextraplugins/extraicons/images/blue/readings.png');*/
+  content: "";
+    display: block;
+    background: url('https://sakai.mci4me.at/library/editor/ckextraplugins/extraicons/images/blue/readings.png') no-repeat;
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin: 0 6px 0 0;
 }
 
-.markdown-body div.language-plaintext pre.highlight {
-   padding: 4px 16px;
-}
+/***********************/
+/* SYNTAX HIGHLIGHTING */
+/***********************/
+.markdown-body {
+  pre.highlight {
+     padding: 16px;
+  }
+  
+  /* No line numbers visible in plaintext */
+  div.language-plaintext {
+    table.rouge-table td pre {
+      padding: 0px 16px;
+    }
 
-.markdown-body table.rouge-table {
-   margin: 0;
-}
+    table.rouge-table td.rouge-gutter pre {
+      visibility: hidden;
+    }
+  }
 
-.markdown-body table.rouge-table tr {
-  background-color: inherit;
-  border-top: none;
-}
+  table.rouge-table {
+    & {
+       margin: 0;
+    }
 
-.markdown-body table.rouge-table td {
-  padding: 0px;
-  border: none;
-}
+    tr {
+      background-color: inherit;
+      border-top: none;
+    }
 
-.markdown-body table.rouge-table td.rouge-gutter {
-  border-right: 1px solid #acacac;
-  color: #acacac;
-}
+    td {
+      padding: 0px;
+      border: none;
+    }
 
-/* No line numbers visible in plaintext */
-.markdown-body div.language-plaintext table.rouge-table td.rouge-gutter pre {
-  visibility: hidden;
+    td.rouge-gutter {
+      border-right: 1px solid #acacac;
+      color: #acacac;
+    }
+  }
 }
