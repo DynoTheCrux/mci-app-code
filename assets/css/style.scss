@@ -17,7 +17,7 @@
 /***********************/
 h1.reading:before {
     /*content: url('https://sakai.mci4me.at/library/editor/ckextraplugins/extraicons/images/blue/readings.png');*/
-  content: "";
+    content: "";
     display: block;
     background: url('https://sakai.mci4me.at/library/editor/ckextraplugins/extraicons/images/blue/readings.png') no-repeat;
     width: 50px;
@@ -47,6 +47,7 @@ h1.reading:before {
     table.rouge-table td.rouge-gutter pre.lineno:before {
       content: ">>";
       visibility: visible;
+    }
   }
 
   table.rouge-table {
