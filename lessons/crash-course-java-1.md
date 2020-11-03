@@ -147,6 +147,38 @@ Let's have 4 beers
 
 It is important to note that a variable is associated with a type, and **is only capable of storing values of that particular type**. For example, an ``int`` variable can store integer values, such as ``123``; but it cannot store real numbers, such as ``12.34``, or texts, such as "Hello".
 
+## Type Casts
+We know from the previous section that variables only can hold values that match their type. However, sometimes a different type is needed than the variable was defined with.
+
+````java
+double pi = 3.141592;
+
+// an int cannot hold a value of type double
+int x = pi; // Illegal
+
+System.out.println(x);
+````
+````plaintext
+error: incompatible types: possible lossy conversion from double to int
+````
+
+The error states that ``int`` and ``double`` are incompatible and that a conversion would result in **loss of information** (the fraction part. But what if we are aware of what is happening and we accept the loss of information because we only care about the integer part of ``pi``? This is were **type casts** come in. A **type cast** can **temporarily** change the type of a value of a variable, if the two types can be converted. Note that the variable itself remains unchanged, only it's type representation is changed. The syntax is the new type inside parenthesis in front of the value to be converted: e.g. ``(int) 3.14;``
+
+````java
+double pi = 3.141592;
+
+// we can type cast a double to an int
+// we loose the fraction part of the double
+int x = (int) pi;
+
+System.out.println(x);
+````
+````plaintext
+3
+````
+
+Some conversions can be done implicitly, generally when a value can be fully represented as another type. For example: Storing the integer value ``3`` can be stored in a floating point variable without any loss of information: ``3.0``; In this case, no type casts are needed.
+
 # Operators
 {: .reading}
 
