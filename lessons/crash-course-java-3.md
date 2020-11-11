@@ -153,5 +153,3 @@ As the method returns a value, we can assign it to a variable.
 Notice the ``void`` keyword in the definition of the main method - this means that main does not return anything.
 
 > A method can have one type of parameter (or parameters) and return another, different type. For example, it can take two ``double`` and return an ``int``.
-
---[[Placeholder video min max]]--
