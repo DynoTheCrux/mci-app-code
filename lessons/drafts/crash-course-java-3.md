@@ -25,7 +25,7 @@ Each class has a name, and each is used to define **attributes** and **behavior*
 Some examples of attributes and behavior:
 
 | Attributes | Behavior |
--------------------------
+|------------|----------|
 | name       | walk     |
 | height     | run      |
 | weight     | jump     |
