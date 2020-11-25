@@ -19,7 +19,7 @@ Create New Project
 ```
 
 <figure>
-<img src="../assets/img/welcome.png" id="fig:000_welcome" alt="Willkommensbildschirm" /><figcaption aria-hidden="true">Willkommensbildschirm</figcaption>
+<img src="../assets/img/002_snake/welcome.png" id="fig:000_welcome" alt="Willkommensbildschirm" /><figcaption aria-hidden="true">Willkommensbildschirm</figcaption>
 </figure>
 
 Im nächsten Fenster kann das Projekt mit verschiedenen vordefinierten
@@ -30,7 +30,7 @@ Empty Activity
 ```
 
 <figure>
-<img src="../assets/img/new_project.png" id="fig:001_new_project" alt="Dialog &quot;Neues Projekt&quot;" /><figcaption aria-hidden="true">Dialog "Neues Projekt"</figcaption>
+<img src="../assets/img/002_snake/new_project.png" id="fig:001_new_project" alt="Dialog &quot;Neues Projekt&quot;" /><figcaption aria-hidden="true">Dialog "Neues Projekt"</figcaption>
 </figure>
 
 Abbildung
@@ -59,7 +59,7 @@ Finish
 ```
 
 <figure>
-<img src="../assets/img/main_view.png" id="fig:002_main_view" alt="Hauptfenster von AndroidStudio." /><figcaption aria-hidden="true">Hauptfenster von AndroidStudio.</figcaption>
+<img src="../assets/img/002_snake/main_view.png" id="fig:002_main_view" alt="Hauptfenster von AndroidStudio." /><figcaption aria-hidden="true">Hauptfenster von AndroidStudio.</figcaption>
 </figure>
 
 Abbildung
@@ -128,7 +128,7 @@ befindet. Dafür könnte in der Methode `onStop()` eine Drosselung
 implementiert werden.
 
 <figure>
-<img src="../assets/img/activity_lifecycle1.png" id="fig:activity_lifecycle" alt="Zustandsdiagramm einer Activity mit Lifecycle-Methoden." /><figcaption aria-hidden="true">Zustandsdiagramm einer Activity mit Lifecycle-Methoden.<span class="citation" data-cites="androidlifecycle"></span></figcaption>
+<img src="../assets/img/002_snake/activity_lifecycle1.png" id="fig:activity_lifecycle" alt="Zustandsdiagramm einer Activity mit Lifecycle-Methoden." /><figcaption aria-hidden="true">Zustandsdiagramm einer Activity mit Lifecycle-Methoden.<span class="citation" data-cites="androidlifecycle"></span></figcaption>
 </figure>
 
 `onCreate(...)` in `MainActivity` überschreibt die Methode aus der
@@ -162,11 +162,11 @@ zeigt den Dialog nach Auswahl von Gerät `Pixel 3a` und System
 `Android 11 (x86)`.
 
 <figure>
-<img src="../assets/img/new_emulator.png" id="fig:003_new_emulator" />
+<img src="../assets/img/002_snake/new_emulator.png" id="fig:003_new_emulator" />
 </figure>
 
 <figure>
-<img src="../assets/img/hello_world.png" id="fig:004_hello_world" />
+<img src="../assets/img/002_snake/hello_world.png" id="fig:004_hello_world" />
 </figure>
 
   
@@ -203,7 +203,7 @@ zeigt das fertige Layout für die nächsten Schritte. Dort sind 2 Textfelder sow
 - btnStop (Button)
 
 <figure>
-<img src="../assets/img/layout_editor.png" id="fig:005_layout_editor" alt="Layout für Tutorial." /><figcaption aria-hidden="true">Layout für Tutorial.</figcaption>
+<img src="../assets/img/002_snake/layout_editor.png" id="fig:005_layout_editor" alt="Layout für Tutorial." /><figcaption aria-hidden="true">Layout für Tutorial.</figcaption>
 </figure>
 
 Verbindung zwischen Layout und Programm
@@ -248,11 +248,11 @@ public class MainActivity extends AppCompatActivity {
 ```
 
 <figure>
-<img src="../assets/img/layout_link_before.png" id="fig:006_layout_link_before" />
+<img src="../assets/img/002_snake/layout_link_before.png" id="fig:006_layout_link_before" />
 </figure>
 
 <figure>
-<img src="../assets/img/layout_link_after.png" id="fig:006_layout_link_after" />
+<img src="../assets/img/002_snake/layout_link_after.png" id="fig:006_layout_link_after" />
 </figure>
 
   
@@ -526,7 +526,7 @@ die Beschriftung auf "Resume" ändern und so weiter wie in Abbildung
 dargestellt.
 
 <figure>
-<img src="../assets/img/loop_pause_states.svg" id="fig:loop_pause_states" alt="Zustandsdiagramm mit Button Beschriftung." /><figcaption aria-hidden="true">Zustandsdiagramm mit Button Beschriftung.</figcaption>
+<img src="../assets/img/002_snake/loop_pause_states.svg" id="fig:loop_pause_states" alt="Zustandsdiagramm mit Button Beschriftung." /><figcaption aria-hidden="true">Zustandsdiagramm mit Button Beschriftung.</figcaption>
 </figure>
 
 Im `onClick`-Listener des Start Buttons muss je nach aktuellem Zustand
@@ -589,7 +589,7 @@ public class MainActivity extends FixedRateLoopActivity {
 ```
 
 <figure>
-<img src="../assets/img/layout_slider.png" id="fig:007_layout_slider" alt="Layout mit zusätzlicher Seekbar und TextView." /><figcaption aria-hidden="true">Layout mit zusätzlicher Seekbar und TextView.</figcaption>
+<img src="../assets/img/002_snake/layout_slider.png" id="fig:007_layout_slider" alt="Layout mit zusätzlicher Seekbar und TextView." /><figcaption aria-hidden="true">Layout mit zusätzlicher Seekbar und TextView.</figcaption>
 </figure>
 
 ### Periode ändern
@@ -751,5 +751,5 @@ ein Tipp auf der rechten Seite eine Rechtskurve. Abbildung
 zeigt die finale Version der App.
 
 <figure>
-<img src="../assets/img/snake_final.png" id="fig:008_snake_final" alt="Fertige Ansicht der Workshop &quot;Snake&quot; App." /><figcaption aria-hidden="true">Fertige Ansicht der Workshop "Snake" App.</figcaption>
+<img src="../assets/img/002_snake/snake_final.png" id="fig:008_snake_final" alt="Fertige Ansicht der Workshop &quot;Snake&quot; App." /><figcaption aria-hidden="true">Fertige Ansicht der Workshop "Snake" App.</figcaption>
 </figure>
