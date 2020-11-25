@@ -168,7 +168,7 @@ In fact, we made the ``LinearLayout`` take up the same screen space as its paren
 
 **If you break your layout at any point, feel free to copy the code of the linked activity_main.xml in each step into your own code view:**
 
-[>Layout Code for this step<](../../assets/source/003_ui/01_activity_main_xml){:target="_blank"}
+[>Layout Code for this step<](../../assets/source/003_ui/01_activity_main.xml){:target="_blank"}
 
 ## Image Header
 Let's fill our layout with life and create a simple image header. In the picture of the final layout, we see that the header consists of an image with some text printed on top of it.
@@ -237,7 +237,7 @@ Notice the changes each attribute has on the layout. The values provided are jus
 
 ![Image Header finished](../../assets/img/003_ui/layout_image_header_fin.png)
 
-[>Layout Code for this step<](../../assets/source/003_ui/02_activity_main_xml){:target="_blank"}
+[>Layout Code for this step<](../../assets/source/003_ui/02_activity_main.xml){:target="_blank"}
 
 # Personal Details Input
 The next section to work on is where the users should input their personal details. It consists of multiple rows of text labels and input fields. The final version could look something like this:
@@ -342,7 +342,7 @@ At this point, your layout should look similar to this:
 
 ![Finished input section](../../assets/img/003_ui/layout_table_fin.png)
 
-[>Layout Code for this step<](../../assets/source/003_ui/03_activity_main_xml){:target="_blank"}
+[>Layout Code for this step<](../../assets/source/003_ui/03_activity_main.xml){:target="_blank"}
 
 # Message Input
 
@@ -371,7 +371,7 @@ and the layout should look similar to
 
 ![Layout](../../assets/img/003_ui/layout_message_input_fin.png)
 
-[>Layout Code for this step<](../../assets/source/003_ui/04_activity_main_xml){:target="_blank"}
+[>Layout Code for this step<](../../assets/source/003_ui/04_activity_main.xml){:target="_blank"}
 
 # Email Options Section
 In order to customize the user experience, we want to include a section where the user is able to select options. 
@@ -399,6 +399,6 @@ and the layout
 
 ![Layout](../../assets/img/003_ui/layout_copytoself_fin.png)
 
-[>Layout Code for this step<](../../assets/source/003_ui/05_activity_main_xml){:target="_blank"}
+[>Layout Code for this step<](../../assets/source/003_ui/05_activity_main.xml){:download="activity_main.xml"}
 
 

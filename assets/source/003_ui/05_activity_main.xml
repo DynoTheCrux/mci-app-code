@@ -1,4 +1,3 @@
-````xml
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -158,7 +157,46 @@
 
         </TableLayout>
 
+        <LinearLayout
+            android:id="@+id/LinearLayoutMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lblMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your message:" />
+
+            <EditText
+                android:id="@+id/txtMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:text="Dear Sir or Madam,\nI would like to inform you that I am currently working on an Android project.\nBest regards,\nAlice" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearLayoutOption"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Switch
+                android:id="@+id/switchCopyToSelf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Send copy to self?" />
+        </LinearLayout>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-````
