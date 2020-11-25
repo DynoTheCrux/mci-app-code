@@ -399,6 +399,6 @@ and the layout
 
 ![Layout](../../assets/img/003_ui/layout_copytoself_fin.png)
 
-[>Layout Code for this step<](../../assets/source/003_ui/05_activity_main.xml){:download="activity_main.xml"}
+<a href="../../assets/source/003_ui/05_activity_main.xml" download="activity_main.xml">&gt;Layout Code for this step&gt;</a>
 
 
