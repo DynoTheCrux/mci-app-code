@@ -410,6 +410,7 @@ The last section to do is to include a "Send"-Button. This is the fastest sectio
 > Set attributes `id` and `text` to appropriate values.
 
 You will then get a layout like this:
+
 ![Layout](../../assets/img/003_ui/layout_send1.png)
 
 There is one optional step that we can add to force the "Send"-Button to always be at the bottom of the screen.
