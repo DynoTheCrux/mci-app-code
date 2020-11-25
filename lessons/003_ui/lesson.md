@@ -399,6 +399,27 @@ and the layout
 
 ![Layout](../../assets/img/003_ui/layout_copytoself_fin.png)
 
-<a href="../../assets/source/003_ui/05_activity_main.xml" download="activity_main.xml">&gt;Layout Code for this step&gt;</a>
+[>Layout Code for this step<](../../assets/source/003_ui/05_activity_main.xml)
 
+# Send Button
 
+The last section to do is to include a "Send"-Button. This is the fastest section, as we only need to add a `Button` widget.
+
+> Add a `Button` (Palette: Buttons) as the **fifth** child of the initial ``LinearLayout``.
+>
+> Set attributes `id` and `text` to appropriate values.
+
+You will then get a layout like this:
+![Layout](../../assets/img/003_ui/layout_send1.png)
+
+There is one optional step that we can add to force the "Send"-Button to always be at the bottom of the screen.
+
+>**Try to do that on your own**
+
+If you did it correctly, you will get to the resulting layout
+
+![Layout](../../assets/img/003_ui/layout_send2.png)
+
+[>Solution and final layout code<](../../assets/source/003_ui/06_activity_main.xml)
+
+>**Play around with this layout to gain a better understanding of the layout editor**. One starting point for your own adventures could be to change the `padding`, so that the widgets do not directly touch the edge of the screen.
