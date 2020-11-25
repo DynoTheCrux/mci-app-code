@@ -401,7 +401,7 @@ and the layout
 
 ![Layout](../../assets/img/003_ui/layout_copytoself_fin.png)
 
-[>Layout Code for this step<](../../assets/source/003_ui/05_activity_main.xml)
+[>Layout Code for this step<](../../assets/source/003_ui/05_activity_main.xml){:target="_blank"}
 
 # Send Button
 
@@ -423,6 +423,6 @@ If you did it correctly, you will get to the resulting layout
 
 ![Layout](../../assets/img/003_ui/layout_send2.png)
 
-[>Solution and final layout code<](../../assets/source/003_ui/06_activity_main.xml)
+[>Solution and final layout code<](../../assets/source/003_ui/06_activity_main.xml){:target="_blank"}
 
 >**Play around with this layout to gain a better understanding of the layout editor**. One starting point for your own adventures could be to change the `padding`, so that the widgets do not directly touch the edge of the screen.
