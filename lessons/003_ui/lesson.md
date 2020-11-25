@@ -1,5 +1,8 @@
 # User Interface
-{: .reading]}
+{: .reading}
+
+* This will become a table of contents (this text will be scrapped).
+{:toc}
 
 The User Interface (UI) or Graphical User Interface (GUI) is arguably the most important part of a program. True, functionality is crucial too, but all the functions of non-trivial programs are hidden behind the UI. If the UI is poorly designed, users tend to look for alternatives.
 
@@ -9,17 +12,17 @@ In this session, we will have a look at the tools available to design a basic UI
 
 In this example, we will use different **Widgets**
 
-- TextView
-- EditText
-- ImageView
-- Switch
-- Button
+- [TextView](https://developer.android.com/reference/android/widget/TextView){:target="_blank"}
+- [EditText](https://developer.android.com/reference/android/widget/EditText){:target="_blank"}
+- [ImageView](https://developer.android.com/reference/android/widget/ImageView){:target="_blank"}
+- [Switch](https://developer.android.com/reference/android/widget/Switch){:target="_blank"}
+- [Button](https://developer.android.com/guide/topics/ui/controls/button){:target="_blank"}
 
 and **Layouts**
 
-- ConstraintLayout
-- LinearLayout
-- TableLayout
+- [ConstraintLayout](https://developer.android.com/reference/androidx/constraintlayout/widget/ConstraintLayout){:target="_blank"}
+- [LinearLayout](https://developer.android.com/guide/topics/ui/layout/linear){:target="_blank"}
+- [TableLayout](https://developer.android.com/reference/android/widget/TableLayout){:target="_blank"}
 
 as well as some layout elements to build the user interface according to the picture.
 
