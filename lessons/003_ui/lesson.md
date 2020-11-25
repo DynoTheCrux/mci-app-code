@@ -1,8 +1,8 @@
-# User Interface
-{: .reading}
-
 * This will become a table of contents (this text will be scrapped).
 {:toc}
+
+# User Interface
+{: .reading}
 
 The User Interface (UI) or Graphical User Interface (GUI) is arguably the most important part of a program. True, functionality is crucial too, but all the functions of non-trivial programs are hidden behind the UI. If the UI is poorly designed, users tend to look for alternatives.
 
@@ -136,18 +136,18 @@ Beware that the `LinearLayout (Vertical)` is a direct child of the `ConstraintLa
 
 ![Component Tree](../../assets/img/003_ui/component_tree_lin_layout1.png)
 
-When you select the ``LinearLayout (Vertical)`` in the component tree, you will notice red exclamation marks in the layout section of the attributes, telling you that it is
+When you select the ``LinearLayout`` in the component tree, you will notice red exclamation marks in the layout section of the attributes, telling you that it is
 - Not horizontally constrained
 - Not vertically constrained
   
 ![Unconstrained](../../assets/img/003_ui/attr_lin_layout1_unconstrained.png)
 
-Any child of ``ConstraintLayout`` needs to have horizontal and vertical constraints defined, hence the name. In our case, we want the ``LinearLayout (Vertical)`` to fill the entire activity screen. So we define constraints such that
+Any child of ``ConstraintLayout`` needs to have horizontal and vertical constraints defined, hence the name. In our case, we want the ``LinearLayout`` to fill the entire activity screen. So we define constraints such that
 
-- the **left edge** of the ``LinearLayout (Vertical)`` has *0 offset* from the **parent's left edge** (``ConstraintLayout``)
-- the **top** of the ``LinearLayout (Vertical)`` has *0 offset* from the **parent's top**
-- the **right edge** of the ``LinearLayout (Vertical)`` has *0 offset* from the **parent's right edge**
-- the **bottom** of the ``LinearLayout (Vertical)`` has *0 offset* from the **parent's bottom**
+- the **left edge** of the ``LinearLayout`` has *0 offset* from the **parent's left edge** (``ConstraintLayout``)
+- the **top** of the ``LinearLayout`` has *0 offset* from the **parent's top**
+- the **right edge** of the ``LinearLayout`` has *0 offset* from the **parent's right edge**
+- the **bottom** of the ``LinearLayout`` has *0 offset* from the **parent's bottom**
 
 
 > Click on the blue ``+`` signs to create constraints, leaving the default value of ``0``. In our case, this adds the attributes
@@ -159,16 +159,16 @@ Any child of ``ConstraintLayout`` needs to have horizontal and vertical constrai
 
 ![Unconstrained](../../assets/img/003_ui/attr_lin_layout1_constrained.png)
 
-When you read the created attributes' names carefully, you sould notice that you can read the constraints they represent like an english sentence:
+When you read the created attributes' names carefully, you should notice that you can read the constraints they represent like an english sentence:
 
 >``layout_constraintBottom_toBottomOf="parent"``:
 >*Constrain the bottom of [this layout] to the bottom of the parent, with 0 offset*.
 
-In fact, we made the ``LinearLayout (Vertical)`` take up the same screen space as its parent, the ``ConstraintLayout``.
+In fact, we made the ``LinearLayout`` take up the same screen space as its parent, the ``ConstraintLayout``.
 
 **If you break your layout at any point, feel free to copy the code of the linked activity_main.xml in each step into your own code view:**
 
-[>Layout Code for this step<](../../assets/source/003_ui/01_activity_main.xml){:target="_blank"}
+[>Layout Code for this step<](../../assets/source/003_ui/01_activity_main_xml){:target="_blank"}
 
 ## Image Header
 Let's fill our layout with life and create a simple image header. In the picture of the final layout, we see that the header consists of an image with some text printed on top of it.
@@ -190,7 +190,7 @@ At this point, your component tree should look like this:
 
 ### Styling the Image Header
 
-Right now, the header takes up the whole screen. The reason for this is, that the ``ConstraintLayout`` that is a child of the ``LinearLayout (Vertical)`` has the attribute ``layout_height`` set to ``match_parent``, i.e. it has the same height as ``LinearLayout (Vertical)``, which is the whole screen.
+Right now, the header takes up the whole screen. The reason for this is, that the ``ConstraintLayout`` that is a child of the ``LinearLayout`` has the attribute ``layout_height`` set to ``match_parent``, i.e. it has the same height as ``LinearLayout``, which is the whole screen.
 
 > Change the ``layout_height`` to ``80dp``
 
@@ -237,4 +237,168 @@ Notice the changes each attribute has on the layout. The values provided are jus
 
 ![Image Header finished](../../assets/img/003_ui/layout_image_header_fin.png)
 
-[>Layout Code for this step<](../../assets/source/003_ui/01_activity_main.xml){:target="_blank"}
+[>Layout Code for this step<](../../assets/source/003_ui/02_activity_main_xml){:target="_blank"}
+
+# Personal Details Input
+The next section to work on is where the users should input their personal details. It consists of multiple rows of text labels and input fields. The final version could look something like this:
+
+![Details input section](../../assets/img/003_ui/details_input_ex.png)
+
+![Details input section (Blueprint)](../../assets/img/003_ui/details_input_ex_blueprint.png)
+
+The Blueprint view of this section shows, that the structure resembles a table, so we will use a ``TableLayout``.
+
+> Start by adding a ``TableLayout`` from the palette into your component tree. It should be the last child of the ``LinearLayout``.
+>
+> Next, add 4 ``TableRow`` as children of ``TableLayout``.
+
+The resulting component tree will look like this:
+
+![Component tree with table layout](../../assets/img/003_ui/component_tree_table1.png)
+
+Now that we have the rows of the table in place, let's place the widgets. The ``TableLayout`` will assign each widget that is a **direct child** of a ``TableRow`` its own column. So if we add 3 direct children to a ``TableRow``, the resulting table will have 3 columns.
+
+Some of our rows have 2 columns, while the "Height" input row has **one extra column**. We have to be careful to add **the same number of child widgets** to each row. So when we want to have an empty space somewhere, we add a `Space` (Palette: Layouts) widget instead.
+
+> Keep adding widgets into your layout according so that it corresponds to the following table:
+> |        | Column1      |      Column2  |      Column3 |
+> |--------|:-------------|:---------------|:-------------|
+> |**Row1**| ``TextView`` | ``EditText`` (Plain Text) | ``Space``    |
+> |**Row2**| ``TextView`` | ``EditText`` (Date) | ``Space``    |
+> |**Row3**| ``TextView`` | ``EditText`` (Number(Decimal)) | ``TextView`` |
+> |**Row4**| ``TextView`` | ``EditText`` (Email) | ``Space``    |
+
+
+Notice that ``EditText`` takes many specialized forms that differ in the type of text that a user can enter into it, as well as the type of keyboard that is shown to the user. You can find all the available forms in the palette in the "Text" section.
+
+Your component tree should now look similar to this:
+
+![Component tree with table layout](../../assets/img/003_ui/component_tree_table2.png)
+
+## Widget IDs
+
+Before the current input section, we only added layouts and static content (the header), so we did not care about the specific IDs that the widgets had. Now this is different, as we added input fields which at a later point we have to access from our Java code to save or send their values.
+
+It is convenient to adhere to a common naming scheme for your widgets. When you work with the widgets in the code, you only have the variable name to guess what kind of widget a variable holds. Therefore, it is common to add the type as a prefix to the name: `prefixName`
+
+Examples:
+- `txtName`: ID of a text input field that is supposed to hold a name.
+- ``btnSend``: ID of a button that performs a send operation.
+
+As a suggestion, you can use following prefixes for the most common types:
+- `lbl`: For labels (`TextView`)
+- `txt`: For text input fields (`EditText`)
+- `btn`: For buttons (`Button`)
+- `chk`: For checkboxes (`CheckBox`)
+- `tb` : For toolbars (`ToolBar`)
+
+For other types you can use the type itself as the prefix:
+- `switch` for switches (``Switch``)
+- `map` for maps (``MapView``)
+
+> Assign a sensible attribute `id` to each widget in the `TableRow`s (except the spaces).
+> 
+> Be careful, IDs have to be **unique**.
+
+![Component tree with table layout and sensible widget IDs](../../assets/img/003_ui/component_tree_table3.png)
+
+## Styling
+Our details input section still does not look good, so let's get to work.
+
+First of all, the ``TableLayout`` takes up all the extra screen space at the bottom. It's `layout_height` is set to `match_parent` by default.
+
+> Change the attribute `layout_height` to `wrap_content`.
+
+Also, let's change the text of the widgets.
+
+> Change the `text` attribute of the labels accordingly.
+>
+> Add `text` to the input field so that it does not look so empty.
+
+![Component tree with table layout and sensible widget IDs](../../assets/img/003_ui/component_tree_table_fin.png)
+
+## Layout weight
+For the label-input combinations to look nicer, let's add a layout weight.
+
+A layout weight (`layout_weight`) makes widgets grow **if** there is extra space available. The whole extra space is then added to each widget on the same level where the attribute `layout_weight` is greater than 0.
+
+The formula is:
+
+``extra_widget_size = empty_space_available * (layout_weight / cumulative_layout_weight)``
+
+Example:
+
+Suppose there is ``60px`` empty space available in a row containing 3 widgets. ``widget1`` has a `layout_height` set to `2`, ``widget2`` has it set to `1` and ``widget3`` does not have the attribute `layout_height` declared at all.
+
+In this case, ``widget1`` will get an extra ``40px`` (60\*2/3) while ``widget2`` can grow by ``20px`` (60\*1/3). ``widget3``'s size does not change.
+
+Check the [official documentation](https://developer.android.com/guide/topics/ui/layout/linear){:target="_blank"} for details.
+
+> Add the attribute `layout_weight` with a value of `1` to each widget in the first two columns.
+
+## Result
+
+At this point, your layout should look similar to this:
+
+![Finished input section](../../assets/img/003_ui/layout_table_fin.png)
+
+[>Layout Code for this step<](../../assets/source/003_ui/03_activity_main_xml){:target="_blank"}
+
+# Message Input
+
+The next section to work on is the message input. In the end it should look like this:
+
+![Finished message section](../../assets/img/003_ui/layout_message_input_ex.png)
+
+![Finished message section (Blueprint)](../../assets/img/003_ui/layout_message_input_ex_blueprint.png)
+
+So in this section, which is in the **third row of the initial vertical** ``LinearLayout``, we want to have a small header and a larger message body in a vertical layout.
+
+This should be easy, we only have to add things we already know.
+
+> Add a `LinearLayout (vertical)` as the **third** child of the initial `LinearLayout`. Change the new layout's `id` attribute to `LinearLayoutMessage`.
+>
+> Change the `layout_height` of `LinearLayoutMessage` to `match_content`.
+>
+> Add a `TextView` and a `EditView` of variant "Multiline Text" as children of `LinearLayoutMessage`.
+> Choose sensible `id`s and fill the `text` attributes so that there is appropriate content. *Hint: use `\n` to include a new line in the text*
+
+Afterwards, your component tree will look like this
+
+![Component tree](../../assets/img/003_ui/component_tree_message1.png)
+
+and the layout should look similar to
+
+![Layout](../../assets/img/003_ui/layout_message_input_fin.png)
+
+[>Layout Code for this step<](../../assets/source/003_ui/04_activity_main_xml){:target="_blank"}
+
+# Email Options Section
+In order to customize the user experience, we want to include a section where the user is able to select options. 
+
+We will only need the one option to let the user choose to also send a copy of the contact form to his own email address once it is sent.
+
+![Email option](../../assets/img/003_ui/layout_copytoself_ex.png)
+
+![Email option (Blueprint)](../../assets/img/003_ui/layout_copytoself_ex_blueprint.png)
+
+In order to achieve the button alignment on the right, we use a `LinearLayout (horizontal)` with a ``Space`` and a ``Switch``. Adding more option switches adds just more of the same, so we are content with just one.
+
+> Add a `LinearLayout (horizontal)` as the **fourth** child of the initial `LinearLayout`. Change the new layout's `id` attribute to `LinearLayoutOption`.
+>
+> Change the `layout_height` of `LinearLayoutOption` to `match_content`.
+>
+> Add a `Space` and a `Switch` (Palette: Buttons) as children of `LinearLayoutOption`.
+> Choose sensible `id`s and fill the `text` attribute of the `Switch` to make sense.
+
+At this point it should be easy for you to align the switch to the right side. If not, have a look at the layout code at the end of this section. We get to the resulting component tree
+
+![Component tree](../../assets/img/003_ui/component_tree_options1.png)
+
+and the layout
+
+![Layout](../../assets/img/003_ui/layout_copytoself_fin.png)
+
+[>Layout Code for this step<](../../assets/source/003_ui/05_activity_main_xml){:target="_blank"}
+
+
