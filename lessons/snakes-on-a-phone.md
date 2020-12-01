@@ -414,7 +414,7 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-    implementation ':rtloop'
+    implementation project(':rtloop')
 }
 ```
 
@@ -640,7 +640,24 @@ Anwendung
 
 Eine weitere Android Library "snake" soll eine einfache Anwendung des
 Loopers zeigen. Es handelt sich dabei um eine einfache Version des Nokia
-Klassikers "Snake". In das bestehende Layout wird dafür das
+Klassikers "Snake".
+
+Um Das Modul nach dem Import verwenden zu können, muss auch hier in der Datei "build.gradle (Module: app)" das Modul als Abhängigkeit hinzugefügt werden. Beide Module sind so als Abhänngigkeit definiert:
+
+```
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation project(':rtloop')
+    implementation project(':snake')
+}
+```
+
+In das bestehende Layout wird dann das
 benutzerdefinierte Element `SnakeView` eingefügt. Da es sich dabei um
 kein Standardelement handelt, kann es auch nicht über den Layout Editor
 eingefügt werden. Die Layout Datei "activity\_main.xml" muss im
