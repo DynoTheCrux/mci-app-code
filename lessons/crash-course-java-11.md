@@ -102,3 +102,5 @@ class Robot {
 ````
 
 >The class ``Robot`` has an inner class ``Brain``. The inner class can access all of the member variables and methods of its outer class, but it cannot be accessed from any outside class.
+
+[>Try it yourself<](https://repl.it/@m0stlyharmless/MCIAppExInner#Main.java){:target="_blank"}
