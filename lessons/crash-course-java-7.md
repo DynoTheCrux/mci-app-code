@@ -68,3 +68,63 @@ Because ``j`` is a reference type, the method affects the object itself, and is 
 > ``String`` and ``List`` are also reference data types.
 
 [>Try it yourself<](https://repl.it/@m0stlyharmless/MCIAppExCallByReference#Main.java){:target="_blank"}
+
+## The null Value
+
+Reference types have a special reference called ``null`` for when there is **no reference**. Consider following code:
+
+````java
+public class Main {
+
+  public static void main(String[ ] args) {
+
+    Person j; // declare variable j
+    
+    // j.setAge(26); // Not possible: j has no reference so far
+
+    // create a new object and store the reference in j
+    j = new Person("John");
+    j.setAge(26);
+    ...
+  }
+}
+````
+
+Until an object is created and assigned to a variable, that variable stores no reference. The special reference that means "no reference" is `null`. The above example is equivalent to:
+
+````java
+public class Main {
+
+  public static void main(String[ ] args) {
+
+    Person j = null; // declare variable j and EXPLICITLY assign null
+    
+    // j.setAge(26); // Not possible: j has no reference so far (null)
+
+    // create a new object and store the reference in j
+    j = new Person("John");
+    j.setAge(26);
+    ...
+  }
+}
+````
+
+Assigning `null` to a variable can be used to **dereference** a variable (delete the reference). `null` can also be used in with the `==` operator to check if a variable has a reference or not, i.e. if an object exists or not.
+
+Example:
+````java
+Person j = new Person("John");
+j.setAge(26);
+
+// dereference j
+j = null;
+
+// check if j holds a reference
+if(j == null) {
+  System.out.println("There is no object j");
+} else {
+  System.out.println("j exists");
+}
+````
+
+> `null` is only assignable to reference types, e.g `int i = null` is not valid!

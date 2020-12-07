@@ -47,7 +47,7 @@ class Machine {
     System.out.println("Starting...");
   }
   
-}  
+}
 ````
 ````java
 public class Main {
