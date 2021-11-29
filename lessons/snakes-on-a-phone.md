@@ -28,7 +28,7 @@ Empty Activity
 
 The figure shows the settings to be made. The location can be chosen freely in principle, but experience shows that paths without spaces work best.
 
-```
+``` menu
 Location: C:\Android\StudioProjects\AndroidTutorial
 ```
 
@@ -93,7 +93,7 @@ For example, the task of a "Stock market" app is to display the most up-to-date 
 
 `onCreate(...)` in `MainActivity` overwrites the method from the superclass. Code in `AppCompatActivity.onCreate(...)` would not be executed. The call to `super.onCreate(...)` therefore explicitly calls the method in the superclass.
 
-    It is convention when overriding lifecycle methods to also call code in the super class using `super.method()`.
+> It is convention when overriding lifecycle methods to also call code in the super class using `super.method()`.
 
 The call `setContentView(...)` sets the layout of the view. More about this later.
 
@@ -297,12 +297,13 @@ File -> New -> Import Module ...
 
 To use the rtloop library in the main program you have to link it first. Under "Gradle Scripts" there is a file ``build.gradle (Module: app)``. In this file, a line has to be added to "dependencies":
 
-````
+``` menu
 implementation project(':rtloop')
-````
+```
 
 So in the end the section "dependencies" will look similar to this:
-```
+
+``` menu
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.2.1'
@@ -512,7 +513,7 @@ Another Android library "snake" is to show a simple application of the looper. I
 
 To be able to use the module after the import, the module must be added as a dependency in the file "build.gradle (Module: app)". Both modules are defined as dependencies:
 
-```
+``` menu
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.2.1'
