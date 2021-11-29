@@ -1,38 +1,38 @@
 AndroidStudio
 =============
 
-AndroidStudio ist die offizielle *IDE* von Google zur Entwicklung von Apps für auf Android basierte Endgeräte (Smartphones, SmartTVs, Wearables, In-Car Entertainment, ...). Die Programmiersprache ist `Java`.
+AndroidStudio is the official *IDE* from Google for developing apps for Android based devices (smartphones, smartTVs, wearables, in-car entertainment, ...). The programming language is `Java`.
 
-Neues Projekt
+New project
 =============
 
-Nach dem Start von AndroidStudio erscheint der Wilkommensbildschirm wo bestehende Projekte geöffnet bzw. ein neues Projekt erstellt werden kann.
+After starting AndroidStudio the welcome screen appears where existing projects can be opened or a new project can be created.
 
 ``` menu
 Create New Project
 ```
 
 <figure>
-<img src="../assets/img/002_snake/welcome.png" id="fig:000_welcome" alt="Willkommensbildschirm" /><figcaption aria-hidden="true">Willkommensbildschirm</figcaption>
+<img src="../assets/img/002_snake/welcome.png" id="fig:000_welcome" alt="Welcome Screen" /><figcaption aria-hidden="true">Welcome Screen</figcaption>
 </figure>
 
-Im nächsten Fenster kann das Projekt mit verschiedenen vordefinierten Ansichten gestartet werden.
+In the next window the project can be started with different predefined views.
 
 ``` menu
 Empty Activity
 ```
 
 <figure>
-<img src="../assets/img/002_snake/new_project.png" id="fig:001_new_project" alt="Dialog &quot;Neues Projekt&quot;" /><figcaption aria-hidden="true">Dialog "Neues Projekt"</figcaption>
+<img src="../assets/img/002_snake/new_project.png" id="fig:001_new_project" alt="Dialog &quot;New Project&quot;" /><figcaption aria-hidden="true">New Project"</figcaption> dialog.
 </figure>
 
-Die Abbildung zeigt die vorzunehmenden Einstellungen. Der Speicherort kann zwar prinzipiell frei gewählt werden, aber die Erfahrung zeigt, dass Pfade ohne Leerzeichen am Besten funktionieren.
+The figure shows the settings to be made. The location can be chosen freely in principle, but experience shows that paths without spaces work best.
 
 ```
 Location: C:\Android\StudioProjects\AndroidTutorial
 ```
 
-Im nächsten Fenster wird ausgewählt, auf welchen Produkten das App später laufen soll. Bei der Auswahl des "Minimum SDK" errechnet AndroidStudio automatisch auf welchem Prozentsatz der Android Geräte das App ausgeführt werden kann. Werden spezielle Features der neueren Android Versionen nicht benötigt, so kann auch eine ältere Version verwendet werden. Für unsere Zwecke ist am Besten eine aktuelle Version geeignet.
+The next window is to select on which products the app should run later. When selecting the "Minimum SDK", AndroidStudio automatically calculates on which percentage of Android devices the app can run. If special features of the newer Android versions are not needed, an older version can be used. For our purposes, a current version is best.
 
 ``` menu
 Minimum SDK: API 30: Android 11.0 (R)
@@ -43,18 +43,18 @@ Finish
 ```
 
 <figure>
-<img src="../assets/img/002_snake/main_view.png" id="fig:002_main_view" alt="Hauptfenster von AndroidStudio." /><figcaption aria-hidden="true">Hauptfenster von AndroidStudio.</figcaption>
+<img src="../assets/img/002_snake/main_view.png" id="fig:002_main_view" alt="Main window of AndroidStudio." /><figcaption aria-hidden="true">Main window of AndroidStudio.</figcaption>
 </figure>
 
-Die Abbildung zeigt die Hauptansicht von AndroidStudio. Rechts befindet sich die Projektstruktur und im linken Teil befindet sich der geöffnete Editor.
-Der Einstiegspunkt der App ist die Datei `MainActivity.java`.
+The figure shows the main view of AndroidStudio. On the right is the project structure and in the left part is the open editor.
+The entry point of the app is the file `MainActivity.java`.
 
-Eine Übersicht über das Programmfenster und die Funktionen bietet die [offizielle Dokumentation](https://developer.android.com/studio/intro/index.html).
+An overview of the program window and the functions can be found in the [official documentation](https://developer.android.com/studio/intro/index.html).
 
-MainActivity und Lifecycle
+MainActivity and Lifecycle
 --------------------------
 
-Ansichten (vgl. Programmfenster) in Android heißen "Activities" und sind alle direkte oder indirekte Subklassen von `Activity`. In unserem Fall ist die ``MainActivity`` eine direkte Subklasse von ``AppCompatActivity``.
+Views (cf. program window) in Android are called ``Activities`` and are all direct or indirect subclasses of `Activity`. In our case, the ``MainActivity`` is a direct subclass of ``AppCompatActivity``.
 
 ``` java
 public class MainActivity extends AppCompatActivity {
@@ -67,42 +67,47 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-Der Programmcode zeigt, dass die neu erstellte Hauptansicht `MainActivity` eine Subklasse der von Android definierten Klasse `AppCompatActivity` ist. Die Methode `onCreate` ist eine von mehreren "Lifecycle"-Methoden:
+The program code shows that the newly created main view `MainActivity` is a subclass of the `AppCompatActivity` class defined by Android. The `onCreate` method is one of several "lifecycle" methods:
 
--   `onCreate()`
--   `onStart()`
--   `onResume()`
--   `onRestart()`
--   `onPause()`
--   `onStop()`
--   `onDestroy()`
+- `onCreate()`
 
-Über Lifecycle-Methoden wird eine Activity vom Betriebssystem informiert in welchem Zustand sie sich gerade befindet.
+- `onStart()`
+
+- `onResume()`
+
+- `onRestart()`
+
+- `onPause()`
+
+- `onStop()`
+
+- `onDestroy()`
+
+Via lifecycle methods an Activity is informed by the operating system in which state it is currently.
 
 <figure>
-<img src="../assets/img/002_snake/activity_lifecycle1.png" id="fig:activity_lifecycle" alt="Zustandsdiagramm einer Activity mit Lifecycle-Methoden." /><figcaption aria-hidden="true">Zustandsdiagramm einer Activity mit Lifecycle-Methoden.<span class="citation" data-cites="androidlifecycle"></span></figcaption>
+<img src="../assets/img/002_snake/activity_lifecycle1.png" id="fig:activity_lifecycle" alt="State diagram of an activity with lifecycle methods." /><figcaption aria-hidden="true">State diagram of an Activity with lifecycle methods.<span class="citation" data-cites="androidlifecycle"></span></figcaption>
 </figure>
 
-Die Aufgabe einer App "Stock market" ist beispielsweise die Anzeige von möglichst aktuellen Aktiendaten. Deshalb stellt die Activity der App eine Verbindung zu einem Webservice her und  aktualisiert die Daten jede Sekunde. Ungeduldige Banker wollen diese App öffnen und sofort über die Lage am Aktienmarkt informiert sein. Die Activity muss die Verbindung zum Webservice also herstellen sobald sie angezeigt wird. Dafür eignet sich beispielsweise die Lifecycle-Methode `onCreate()`, die sofort nach dem Start ausgeführt wird. Andererseits sollen die Daten nicht mehr im Sekundentakt aktualisiert werden wenn sich die App im Hintergrund befindet. Dafür könnte in der Methode `onStop()` eine Drosselung implementiert werden.
+For example, the task of a "Stock market" app is to display the most up-to-date stock data possible. Therefore, the app's Activity connects to a web service and updates the data every second. Impatient bankers want to open this app and be immediately informed about the situation on the stock market. So the Activity has to connect to the web service as soon as it is displayed. For example, the lifecycle method `onCreate()`, which is executed immediately after startup, is suitable for this. On the other hand, the data should no longer be updated every second when the app is running in the background. For this, some kind of throttling could be implemented in the `onStop()` method.
 
-`onCreate(...)` in `MainActivity` überschreibt die Methode aus der Superklasse. Code in `AppCompatActivity.onCreate(...)` würde also nicht
-ausgeführt werden. Der Aufruf von `super.onCreate(...)` ruft deshalb explizit die Methode in der Superklasse auf.
+`onCreate(...)` in `MainActivity` overwrites the method from the superclass. Code in `AppCompatActivity.onCreate(...)` would not be executed. The call to `super.onCreate(...)` therefore explicitly calls the method in the superclass.
 
-    Es ist Konvention beim Überschreiben von Lifecycle-Methoden auch Code in der Superklasse mittels `super.methode()` aufzurufen.
+    It is convention when overriding lifecycle methods to also call code in the super class using `super.method()`.
 
-Der Aufruf `setContentView(...)` legt das Layout der Ansicht fest. Mehr dazu später.
+The call `setContentView(...)` sets the layout of the view. More about this later.
 
-Der Emulator
+The emulator
 ------------
 
-Das erstellte Projekt kann bereits auf die Hardware überspielt und ausgeführt werden. In der frühen Entwicklungsphase bietet es sich jedoch an, den Android Emulator zu benutzen. Diese virtualisierte Hardware verhält sich fast genau wie das reale Pendant und ist ein wichtiges Werkzeug zum Testen des Programms. Die Tastenkombination
+The created project can already be transferred to the hardware and executed. In the early development phase, however, it is a good idea to use the Android emulator. This virtualized hardware behaves almost exactly like its real counterpart and is an important tool for testing the program. The key combination
 
 ``` menu
 Shift + F10
 ```
 
-oder der Klick auf den grünen Play-Button startet den
-Hardware-Auswahldialog, falls noch kein Emulator vorhanden ist. Mit "Create New Emulator" kann ein neuer Emulator erstellt werden. Die Abbildung zeigt den Dialog nach Auswahl von Gerät `Pixel 3a` und System
+or the click on the green play button starts the
+hardware selection dialog if no emulator is available yet. With "Create New Emulator" a new emulator can be created. The figure shows the dialog after selecting device `Pixel 3a` and system
 `Android 11 (x86)`.
 
 <figure>
@@ -110,35 +115,35 @@ Hardware-Auswahldialog, falls noch kein Emulator vorhanden ist. Mit "Create New 
 </figure>
  
 
-Nun kann der erstellte Emulator als Zielgerät ausgewählt werden und nach dem Startvorgang erscheint das virtuelle Smartphone mit dem gestarteten Projekt
+Now the created emulator can be selected as the target device and after the startup process the virtual smartphone with the started project appears
 
 <figure>
 <img src="../assets/img/002_snake/hello_world.png" id="fig:004_hello_world" />
 </figure>
 
-Der Layout Editor
+The Layout Editor
 -----------------
 
-Aufmerksame Naturen werden sich bereits über den angezeigten Text "Hello World" gewundert haben, da im Programmcode davon nichts zu finden ist. Ein wichtiger Design-Grundsatz in Android ist die Trennung von Anzeige und Programmlogik. Der Code in `MainActivity` hat (optimalerweise) keinen Einfluss auf das Design und die angezeigten Elemente.
+Attentive natures will have already wondered about the displayed text "Hello World", as there is nothing of it in the program code. An important design principle in Android is the separation of design and program logic. The code in `MainActivity` has (optimally) no influence on the design and the displayed elements.
 
-Für den angezeigten Inhalt ist das Layout zuständig das in der Datei `activity_main.xml` definiert ist und unter `res\layout` zu finden ist.
-Hier findet sich auch das Text-Element "Hello World".
+For the displayed content the layout is responsible which is defined in the file `activity_main.xml` and can be found under `res\layout`.
+Here you can also find the text element "Hello World".
 
-Für eine Einführung in den Layout-Editor wird an dieser Stelle auf die [Android Dokumentation](https://developer.android.com/studio/write/layout-editor.html) in verwiesen. Die Abbildung zeigt das fertige Layout für die nächsten Schritte. Dort sind 2 Textfelder sowie 2 Buttons enthalten: 
+For an introduction to the layout editor, please refer to the [Android Documentation](https://developer.android.com/studio/write/layout-editor.html) in. The figure shows the finished layout for the next steps. There are 2 text fields as well as 2 buttons included: 
 - txtCounter (TextView)
 - txtCounterValue (TextView)
 - btnStart (Button)
 - btnStop (Button)
 
 <figure>
-<img src="../assets/img/002_snake/layout_editor.png" id="fig:005_layout_editor" alt="Layout für Tutorial." /><figcaption aria-hidden="true">Layout für Tutorial.</figcaption>
+<img src="../assets/img/002_snake/layout_editor.png" id="fig:005_layout_editor" alt="Layout for tutorial." /><figcaption aria-hidden="true">Layout for tutorial.</figcaption>
 </figure>
 
-Verbindung zwischen Layout und Programm
+Connection between layout and program
 ---------------------------------------
 
-Damit das Layout nicht bloß angezeigt sondern auch mit Logik versehen werden kann, muss eine Verbindung zwischen *GUI*-Elementen und dem Programmcode hergestellt werden. Dies geschieht in Android mit Hilfe des Reflection-Objekts `R`. Dieses wandelt Elemente aus der Layout-Datei im *XML*-Format in ein Java-Objekt um.
-Mit der Funktion `findByViewId(id)` können Elemente aus dem Layout in den Programmcode geladen und verändert werden.
+In order for the layout not merely to be displayed but also to be provided with logic, a connection between *GUI* elements and the program code must be established. This is done in Android with the help of the Reflection object ``R``. This converts elements from the layout file in *XML* format into a Java object.
+With the function `findByViewId(id)` elements from the layout can be loaded into the program code and modified.
 
 ``` java
 public class MainActivity extends AppCompatActivity {
@@ -166,19 +171,17 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-Ansicht im Layout-Editor:
+View in layout editor:
 <figure>
 <img src="../assets/img/002_snake/layout_link_before.png" id="fig:006_layout_link_before" />
 </figure>
 
-Ansicht des gestarteten Programms:
+View of the launched program:
 <figure>
 <img src="../assets/img/002_snake/layout_link_after.png" id="fig:006_layout_link_after" />
 </figure>
 
-  
-
-Android Library "rtloop"
+Android Library "rtloop
 ========================
 
 ``` c
@@ -201,28 +204,31 @@ void interrupt_handler(void)
 }
 ```
 
-Dieser Programmcode zeigt die typische Struktur eines in `C` geschriebenen Programms für
-einen Microcontroller. Aus diesem Aufbau sind unterschiedliche Strukturen ersichtlich:
+This program code shows the typical structure of a program written in `C` for a microcontroller. From this example different structures can be seen:
 
--   Einstiegspunkt
--   Setup
--   Endlos-Schleife
--   Asynchrone Events
--   Programmende
+- Entry point
 
-Beim Start des Programms (`main`) werden Initialisierungen (Ports, Schnittstellen, ...) durchgeführt. In der Endlos-Schleife wird die Hauptaufgabe des Programms (Daten holen/verarbeiten/speichern) zyklisch ausgeführt. Nebenbei werden durch Events (Button gedrückt, Counter Wert erreicht, ...) ausgelöste, asynchrone Arbeiten ausgeführt.
+- Setup
 
-Auch PC Programme und sogar der PC selbst läuft prinzipiell nach diesem Schema ab (Bootvorgang, Betriebssystem ausführen, Asynchrone Eingaben verarbeiten). Allerdings steigt die Komplexität mit steigender Abstraktion von der Hardware-Ebene erheblich an. So läuft ein Programm in einem Betriebssystem nie alleine, darf also nicht einfach eine naive `while(1)`-Schleife implementieren weil dadurch die gesamte *CPU*-Zeit von
-einem Programm beschlagnahmt werden würde.
+- Endless loop
 
-In diesem Kurs wird deshalb die Basis für die Ausführung eines Programms nach dem Schema eines Microcontrollers in Form der Android Library "rtloop" bereit gestellt. Diese Library beinhaltet alle benötigten Programmteile um eine "normale" Activity möglichst einfach nach oben gezeigten Schema implementieren zu können ohne sich mit den Details
-befassen zu müssen.
+- Asynchronous events
+
+- End of program
+
+At the start of the program (`main`) initializations (ports, interfaces, ...) are executed. In the endless loop the main task of the program (get/process/save data) is executed cyclically. At the same time, asynchronous tasks triggered by events (button pressed, counter value reached, ...) are executed.
+
+Also PC programs and even the PC itself runs in principle after this scheme (boot process, operating system execute, asynchronous inputs process). 
+
+However, the complexity increases considerably with increasing abstraction from the hardware level. However, a program in an operating system never runs alone and may therefore not implement simply a naive `while(1)` loop because thereby the entire *CPU* time of a program would be hogged by that program.
+
+In this course, therefore, the basis for executing a program according to the scheme of a microcontroller is provided in the form of the Android library "rtloop". This library contains all necessary program parts to implement a "normal" Activity as simple as possible according to the scheme shown above without having to deal with the details.
 
 FixedPeriodLooper
 -----------------
 
-Die Klasse `FixedPeriodLooper` stellt das Grundgerüst dar. Der folgende Code zeigt den grundsätzlichen Aufbau der Klasse. Die Ausführungszeit der
-Loop wird überwacht und bei Zeitüberschreitung wird eine Warnung ausgegeben (Soft-Realtime).
+The class ``FixedPeriodLooper`` represents the basic framework. The following code shows the basic structure of the class. The execution time of the
+loop is monitored and a warning is issued if the time is exceeded (soft-realtime).
 
 ``` java
 class FixedPeriodLooper {
@@ -252,37 +258,50 @@ class FixedPeriodLooper {
 FixedRateLoopActivity
 --------------------
 
-Der oberste Grundsatz eines Programms mit User Interface (UI) ist, dass diese zu jedem Zeitpunkt auf Eingaben reagieren muss (engl.: Responsiveness). Den Effekt, wenn das nicht der Fall ist, kennt man wenn ein Programm "einfriert". Deshalb ist es wichtig, dass direkt in der Activity kein Code ausgeführt wird, der durch zu lange Ausführungszeiten die UI blockieren kann.
+The first principle of a program with a user interface (UI) is that it must respond to input at all times (responsiveness). The effect when this is not the case is known when a program "freezes". Therefore it is important that no code is executed directly in the Activity, which can block the UI by too long execution times.
 
-Die Activity `FixedRateLoopActivity` ist eine Subklasse von `AppCompatActivity` (vgl. `MainActivity`) und stellt die Funktionalität zum Ausführen eines `FixedPeriodLooper`s im Hintergrund bereit, d.h. ohne Blockieren der UI. Sie stellt Methoden zum Steuern der Schleifenausführung zur Verfügung:
+The Activity `FixedRateLoopActivity` is a subclass of `AppCompatActivity` (cf. `MainActivity`) and provides the functionality to execute a `FixedPeriodLooper`s in the background, i.e. without blocking the UI. It provides methods to control the loop execution:
 
--   loopStart()
--   loopStop()
--   loopPause()
--   loopResume()
--   loopReset()
+- loopStart()
 
-und bietet Lifecycle-Methoden an, um auf Statusänderungen (z.B. Abbruch bei Fehler) reagieren zu können:
+- loopStop()
 
--   onLoopCreate()
--   onLoopStart()
--   onLoopPause()
--   onLoopResume()
--   onLoopStop()
+- loopPause()
 
-Implementierung
+- loopResume()
+
+- loopReset()
+
+and provides lifecycle methods to react on status changes (e.g. abort on error):
+
+- onLoopCreate()
+
+- onLoopStart()
+
+- onLoopPause()
+
+- onLoopResume()
+
+- onLoopStop()
+
+Implementation
 ---------------
 
-Zuallererst muss das Modul "rtloop" in unser Programm geladen werden. Dazu kann im Menu unter
+First of all, the module "rtloop" must be loaded into our program. This can be done in the menu under
 
 ``` menu
 File -> New -> Import Module ...
 ```
 
-das Modul eingebunden werden (Entpacken nicht vergessen). 
+(don't forget to unpack it). 
 
-Um die rtloop-Library im Hauptprogramm verwenden zu können muss diese zuerst verknüpft werden. Unter "Gradle Scripts" befindet sich eine Datei "build.gradle (Module: app)". In dieser muss bei "dependencies" Zeile 8 ergänzt werden:
+To use the rtloop library in the main program you have to link it first. Under "Gradle Scripts" there is a file ``build.gradle (Module: app)``. In this file, a line has to be added to "dependencies":
 
+````
+implementation project(':rtloop')
+````
+
+So in the end the section "dependencies" will look similar to this:
 ```
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
@@ -295,21 +314,21 @@ dependencies {
 }
 ```
 
-Anschließend muss das Project mit den Menüpunkten
+Afterwards the project must be implemented with the menu items
 
 ``` menu
 Tools -> Android -> Sync Project with Gradle Files
 ```
 
-und
+and
 
 ``` menu
 Build -> Make Project (Ctrl + F9)
 ```
 
-neu kompiliert werden. Nun kann die Library im Hauptprogramm verwendet werden.
+must be recompiled. Now the library can be used in the main program.
 
-Statt `AppCompatActivity` wird nun `FixedRateLoopActivity` als Superklasse verwendet:
+Instead of `AppCompatActivity` now `FixedRateLoopActivity` is used as superclass:
 
 ``` java
 public class MainActivity extends FixedRateLoopActivity { // change from AppCompatActivity
@@ -322,10 +341,10 @@ public class MainActivity extends FixedRateLoopActivity { // change from AppComp
 }
 ```
 
-Als Nächstes wird Start und Stop der Loop auf die beiden Buttons gelegt.
-Dafür werden auf die Buttons sogenannte "Listeners" gesetzt. Listeners können mit Interrupts verglichen werden und führen bestimmte Methoden bei Auftreten von definierten Ereignissen (Events) aus. Als Ereignis bietet sich hier "Button geklickt" an. Der Listener für das Event `OnClick` wird über die Methode `setOnClickListener()` erstellt. Das Namensschema dieser Methoden ist immer "setOn*Event*Listener" bzw. "addOn*Event*Listener" je nachdem ob nur ein oder mehrere Listener gleichzeitig erlaubt sind.
+Next, start and stop of the loop is put on the two buttons.
+For this, so-called "listeners" are set on the buttons. Listeners can be compared to interrupts and execute certain methods when defined events occur. The event "Button clicked" can be used here. The listener for the event `OnClick` is created by the method `setOnClickListener()`. The naming scheme of these methods is always "setOn**Event**Listener" or "addOn**Event**Listener" depending on whether only one or more listeners are allowed at the same time.
 
-Unter der Zuweisung der Buttons in `onCreate` werden also die Listener hinzugefügt und `loopStart()` bzw. `loopStop()` darin aufgerufen:
+So under the assignment of the buttons in `onCreate` the listeners are added and `loopStart()` or `loopStop()` is called in it:
 
 ``` java
 protected void onCreate(Bundle savedInstanceState) {
@@ -353,7 +372,7 @@ protected void onCreate(Bundle savedInstanceState) {
 }
 ```
 
-Um zu sehen ob die Schleife läuft oder steht wird nun noch der Zählwert `txtCounterValue` in der Titelleiste pro Zyklus aktualisiert. Dafür müssen die beiden Methoden ``loopSetup`` und ``loopIteration`` überschrieben (override) werden.
+To see if the loop is running or stopped, the counter value `txtCounterValue` in the title bar is updated per cycle. For this the two methods ``loopSetup`` and ``loopIteration`` must be overridden.
 
 ``` java
 @Override
@@ -375,17 +394,17 @@ protected void loopIteration() {
 }
 ```
 
-Die Methode `setWidgetText(TextView,String)` ist eine Methode aus `FixedRateLoopActivity` und wurde eingeführt, da durch eine Besonderheit von Android das User Interface nur direkt von der Activity geändert werden darf. Änderungen z.B. aus Lifecycle-Methoden müssen deshalb den Umweg über von der Activity bereitgestellte Methoden nehmen.
+The method `setWidgetText(TextView,String)` is a method from `FixedRateLoopActivity` and was introduced because by a special feature of Android the user interface may be changed only directly from the Activity itself. Changes e.g. from lifecycle methods must therefore take the detour via methods provided by the Activity.
 
 ### Counter Pause/Resume
 
-Um die Lifecycle Methoden der Loop zu demonstrieren, wird eine Pause-Funktion implementiert: Wenn der Counter gestartet wurde, soll sich die Beschriftung des Start-Buttons auf "Pause" ändern und ein Klick soll den Counter pausieren. Sobald der Counter pausiert ist, soll sich die Beschriftung auf "Resume" ändern.
+To demonstrate the lifecycle methods of the loop, a pause function is implemented: When the counter has been started, the label of the start button should change to "Pause" and a click should pause the counter. Once the counter is paused, the label shall change to "Resume".
 
 <figure>
-<img src="../assets/img/002_snake/loop_pause_states.svg" id="fig:loop_pause_states" alt="Zustandsdiagramm mit Button Beschriftung." /><figcaption aria-hidden="true">Zustandsdiagramm mit Button Beschriftung.</figcaption>
+<img src="../assets/img/002_snake/loop_pause_states.svg" id="fig:loop_pause_states" alt="State diagram with button label." /><figcaption aria-hidden="true">State diagram with button label.</figcaption>
 </figure>
 
-Im `onClick`-Listener des Start Buttons muss je nach aktuellem Zustand der Schleife zwischen Start, Pause und Resume unterschieden werden:
+In the `onClick` listener of the Start button, a distinction must be made between Start, Pause and Resume depending on the current state of the loop:
 
 ``` java
 btnStart.setOnClickListener(new View.OnClickListener() {
@@ -408,7 +427,7 @@ btnStart.setOnClickListener(new View.OnClickListener() {
 });
 ```
 
-Zusätzlich wird die Beschriftung des Start Buttons über die Lifecycle Methoden geändert:
+Additionally, the label of the start button is changed using the lifecycle methods:
 
 ``` java
 public class MainActivity extends FixedRateLoopActivity {
@@ -443,12 +462,12 @@ public class MainActivity extends FixedRateLoopActivity {
 ```
 
 <figure>
-<img src="../assets/img/002_snake/layout_slider.png" id="fig:007_layout_slider" alt="Layout mit zusätzlicher Seekbar und TextView." /><figcaption aria-hidden="true">Layout mit zusätzlicher Seekbar und TextView.</figcaption>
+<img src="../assets/img/002_snake/layout_slider.png" id="fig:007_layout_slider" alt="Layout with additional Seekbar and TextView." /><figcaption aria-hidden="true">Layout with additional Seekbar and TextView.</figcaption>
 </figure>
 
-### Periode ändern
+### Change period
 
-Um die Frequenz der Schleifenaufrufe aus der UI steuern zu können wird im Layout eine `SeekBar` ``skbFreq`` sowie eine weitere ``TextView`` ``txtFreq`` wie in der Abbildung erstellt.
+To be able to control the frequency of loop calls from the UI a `SeekBar` ``skbFreq`` is created in the layout as well as another ``TextView` ``txtFreq`` as in the figure.
 
 ``` java
 public class MainActivity extends FixedRateLoopActivity {
@@ -486,12 +505,12 @@ public class MainActivity extends FixedRateLoopActivity {
     // ... some more code below
 ```
 
-Anwendung
+Application
 =========
 
-Eine weitere Android Library "snake" soll eine einfache Anwendung des Loopers zeigen. Es handelt sich dabei um eine einfache Version des Nokia Klassikers "Snake".
+Another Android library "snake" is to show a simple application of the looper. It is a simple version of the Nokia classic "Snake".
 
-Um Das Modul nach dem Import verwenden zu können, muss auch hier in der Datei "build.gradle (Module: app)" das Modul als Abhängigkeit hinzugefügt werden. Beide Module sind so als Abhänngigkeit definiert:
+To be able to use the module after the import, the module must be added as a dependency in the file "build.gradle (Module: app)". Both modules are defined as dependencies:
 
 ```
 dependencies {
@@ -506,7 +525,7 @@ dependencies {
 }
 ```
 
-In das bestehende Layout wird dann das benutzerdefinierte Element `SnakeView` eingefügt. Da es sich dabei um kein Standardelement handelt, kann es auch nicht über den Layout Editor eingefügt werden. Die Layout Datei ``activity_main.xml`` muss im Textmodus geöffnet werden und im bereits angelegten `FrameLayout` wird das neue Element hinzugefügt:
+The custom element `SnakeView` is then inserted into the existing layout. Since this is not a standard element, it cannot be inserted via the layout editor. The layout file ``activity_main.xml`` must be opened in text mode and in the already created `FrameLayout` the new element is added:
 
 ``` xml
 <FrameLayout
@@ -521,7 +540,7 @@ In das bestehende Layout wird dann das benutzerdefinierte Element `SnakeView` ei
 </FrameLayout>
 ```
 
-Im nächsten Schritt müssen die loop-Methoden so angepasst werden, dass statt des einfachen Zählers das Spiel gesteuert wird.
+The next step is to modify the loop methods to control the game instead of the simple counter.
 
 ``` java
 // ... more code above
@@ -550,11 +569,11 @@ Im nächsten Schritt müssen die loop-Methoden so angepasst werden, dass statt d
 // ... more code below
 ```
 
-Mit Klick auf den Start Button wird das Spiel also gestartet. Fehlt nur noch die Steuerung.
+With a click on the start button the game is started. The only thing missing is the control functionality.
 
-Steuerung
+Control
 ====================
-Am Ende wird noch die Steuerung per Keyboard für den Emulator implementiert:
+At the end we implement the keyboard control for the emulator:
 
 ``` java
 public class MainActivity extends FixedRateLoopActivity {
@@ -603,11 +622,11 @@ public class MainActivity extends FixedRateLoopActivity {
 }
 ```
 
-Im Emulator kann nun kann die Schlange mit den Tasten "A" und "D" nach links bzw. nach rechts gesteuert werden. Mit Touchscreen bewirkt ein Tipp auf der rechten linken Seite des Spielfeldes eine Linkskurve und ein Tipp auf der rechten Seite eine Rechtskurve. 
+In the emulator the snake can now be steered with the keys "A" and "D" to the left or to the right. With touchscreen a tap on the left side of the field causes a left turn and a tap on the right side causes a right turn.
 
-Finale Ansicht
+Final view
 ====================
 
 <figure>
-<img src="../assets/img/002_snake/snake_final.png" id="fig:008_snake_final" alt="Fertige Ansicht der Workshop &quot;Snake&quot; App." /><figcaption aria-hidden="true">Fertige Ansicht der Workshop "Snake" App.</figcaption>
+<img src="../assets/img/002_snake/snake_final.png" id="fig:008_snake_final" alt="Finished view of the Workshop &quot;Snake&quot; app." /><figcaption aria-hidden="true">Final view of the Workshop "Snake" app.</figcaption>
 </figure>
