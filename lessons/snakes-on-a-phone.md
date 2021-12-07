@@ -379,19 +379,12 @@ To see if the loop is running or stopped, the counter value `txtCounterValue` in
 @Override
 protected void loopSetup() {
     score = 0;
-    snakeView.setup(20,30,5,true, 10, 20);
-    snakeView.start();
 }
 
 @Override
 protected void loopIteration() {
     score++;
-    setWidgetText(txtCounter, String.valueOf(snakeView.getScore()));
-
-    GameState state = snakeView.update();
-    if(state == GameState.GameOver) {
-        loopStop();
-    }
+    setWidgetText(txtCounter, String.valueOf(score));
 }
 ```
 
