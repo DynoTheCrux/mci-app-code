@@ -35,7 +35,7 @@ Location: C:\Android\StudioProjects\AndroidTutorial
 The next window is to select on which products the app should run later. When selecting the "Minimum SDK", AndroidStudio automatically calculates on which percentage of Android devices the app can run. If special features of the newer Android versions are not needed, an older version can be used. For our purposes, a current version is best.
 
 ``` menu
-Minimum SDK: API 30: Android 11.0 (R)
+Minimum SDK: API 28: Android 9.0 (Pie)
 ```
 
 ``` menu
@@ -180,6 +180,10 @@ View of the launched program:
 <figure>
 <img src="../assets/img/002_snake/layout_link_after.png" id="fig:006_layout_link_after" />
 </figure>
+
+Video Tutorial
+------------------------
+[![MCI | App | Workshop: Snakes On A Phone 01](https://img.youtube.com/vi/YB-7QcShmWk/hqdefault.jpg)](https://youtu.be/YB-7QcShmWk "MCI | App | Workshop: Snakes On A Phone 01"){: .video}
 
 Android Library "rtloop
 ========================
