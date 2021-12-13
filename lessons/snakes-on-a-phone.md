@@ -183,7 +183,8 @@ View of the launched program:
 
 Video Tutorial
 ------------------------
-[![MCI | App | Workshop: Snakes On A Phone 01](https://img.youtube.com/vi/YB-7QcShmWk/hqdefault.jpg)](https://youtu.be/YB-7QcShmWk "MCI | App | Workshop: Snakes On A Phone 01"){: .video}
+
+[![MCI | App | Workshop: Snakes On A Phone 01](https://img.youtube.com/vi/YB-7QcShmWk/hqdefault.jpg)](https://youtu.be/YB-7QcShmWk "MCI | App | Workshop: Snakes On A Phone 01")
 
 Android Library "rtloop
 ========================
@@ -394,6 +395,11 @@ protected void loopIteration() {
 
 The method `setWidgetText(TextView,String)` is a method from `FixedRateLoopActivity` and was introduced because by a special feature of Android the user interface may be changed only directly from the Activity itself. Changes e.g. from lifecycle methods must therefore take the detour via methods provided by the Activity.
 
+Video Tutorial
+------------------------
+
+[![MCI | App | Workshop: Snakes On A Phone 02](https://img.youtube.com/vi/3htTAgIGlEs/hqdefault.jpg)](https://youtu.be/3htTAgIGlEs "MCI | App | Workshop: Snakes On A Phone 02")
+
 ### Counter Pause/Resume
 
 To demonstrate the lifecycle methods of the loop, a pause function is implemented: When the counter has been started, the label of the start button should change to "Pause" and a click should pause the counter. Once the counter is paused, the label shall change to "Resume".
@@ -503,6 +509,11 @@ public class MainActivity extends FixedRateLoopActivity {
     // ... some more code below
 ```
 
+Video Tutorial
+------------------------
+
+[![MCI | App | Workshop: Snakes On A Phone 03](https://img.youtube.com/vi/C9Cw9KAY0BE/hqdefault.jpg)](https://youtu.be/C9Cw9KAY0BE "MCI | App | Workshop: Snakes On A Phone 03")
+
 Application
 =========
 
@@ -575,34 +586,39 @@ At the end we implement the keyboard control for the emulator:
 
 ``` java
 public class MainActivity extends FixedRateLoopActivity {
+    
+    // ... SOME OTHER CODE ABOVE
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        snakeView = (SnakeView) findViewById(R.id.snakeView); // add SnakeView
-        snakeView.setOnTouchListener(this); // set onTouch listener
-    
-        // ... some more code
-    }
-
-
-    // This method gets called when keyboard is used
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (getLoopState() == LoopState.RUNNING) { // only react when loop is running
-            Direction dir = directionFromKeyEvent(event); // get movement direction
-    
-            if (dir != Direction.Forward) { // turn snake if other than neutral direction
+        if (getLoopState() == LoopState.RUNNING) {
+            Direction dir = directionFromKeyEvent(event);
+
+            if (dir != Direction.Forward) {
                 snakeView.turnSnake(dir);
-                return true; // acknowledge to android that we reacted on the input
+                return true;
             }
         }
-        return false; // we did not react on the input in this case
+        return false;
     }
-    
+
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        if (getLoopState() == LoopState.RUNNING) {
+            Direction dir = directionFromMotionEvent(event);
+
+            if (dir != Direction.Forward) {
+                snakeView.turnSnake(dir);
+                return true;
+            }
+        }
+        return false;
+    }
+
     private Direction directionFromKeyEvent(KeyEvent event) {
         Direction dir = Direction.Forward; // neutral direction
-    
+
         if (event.getAction() == KeyEvent.ACTION_DOWN) { // only when first pressed
             switch (event.getKeyCode()) {
                 case KeyEvent.KEYCODE_A:
@@ -613,10 +629,23 @@ public class MainActivity extends FixedRateLoopActivity {
                     break;
             }
         }
-    
+
         return dir;
     }
-    // ... some more code below
+
+    private Direction directionFromMotionEvent(MotionEvent event) {
+        Direction dir = Direction.Forward; // neutral direction
+
+        if (event.getAction() == MotionEvent.ACTION_DOWN) { // only when first pressed
+            if (event.getX() <= ((snakeView.getWidth() / 2))) { // left side of @SnakeView
+                dir = Direction.Left;
+            } else { // right side of @SnakeView
+                dir = Direction.Right;
+            }
+        }
+
+        return dir;
+    }
 }
 ```
 

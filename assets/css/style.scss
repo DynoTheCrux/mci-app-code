@@ -27,22 +27,6 @@ h1.reading:before {
 }
 
 /***********************/
-/*    VIDEO PLAY BTN   */
-/***********************/
-.video:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 40px;
-  height: 40px;
-  z-index: 100;
-  margin: -20px 0 0 -20px;
-  background: transparent url(../img/play-button.png) no-repeat center;
-  pointer-events: none;
-}
-
-/***********************/
 /* SYNTAX HIGHLIGHTING */
 /***********************/
 .markdown-body {
