@@ -184,7 +184,7 @@ View of the launched program:
 Video
 ------------------------
 
-[![MCI | App | Workshop: Snakes On A Phone 01](https://img.youtube.com/vi/YB-7QcShmWk/hqdefault.jpg)](https://youtu.be/YB-7QcShmWk "MCI | App | Workshop: Snakes On A Phone 01")
+[![MCI - App - Workshop: Snakes On A Phone 01](https://img.youtube.com/vi/YB-7QcShmWk/hqdefault.jpg)](https://youtu.be/YB-7QcShmWk "MCI - App - Workshop: Snakes On A Phone 01")
 
 Android Library "rtloop
 ========================
@@ -398,7 +398,7 @@ The method `setWidgetText(TextView,String)` is a method from `FixedRateLoopActiv
 Video
 ------------------------
 
-[![MCI | App | Workshop: Snakes On A Phone 02](https://img.youtube.com/vi/3htTAgIGlEs/hqdefault.jpg)](https://youtu.be/3htTAgIGlEs "MCI | App | Workshop: Snakes On A Phone 02")
+[![MCI - App - Workshop: Snakes On A Phone 02](https://img.youtube.com/vi/3htTAgIGlEs/hqdefault.jpg)](https://youtu.be/3htTAgIGlEs "MCI - App - Workshop: Snakes On A Phone 02")
 
 ### Counter Pause/Resume
 
@@ -512,7 +512,7 @@ public class MainActivity extends FixedRateLoopActivity {
 Video
 ------------------------
 
-[![MCI | App | Workshop: Snakes On A Phone 03](https://img.youtube.com/vi/C9Cw9KAY0BE/hqdefault.jpg)](https://youtu.be/C9Cw9KAY0BE "MCI | App | Workshop: Snakes On A Phone 03")
+[![MCI - App - Workshop: Snakes On A Phone 03](https://img.youtube.com/vi/C9Cw9KAY0BE/hqdefault.jpg)](https://youtu.be/C9Cw9KAY0BE "MCI - App - Workshop: Snakes On A Phone 03")
 
 Application
 =========
@@ -654,7 +654,7 @@ In the emulator the snake can now be steered with the keys "A" and "D" to the le
 Video
 ------------------------
 
-[![MCI | App | Workshop: Snakes On A Phone 04](https://img.youtube.com/vi/3V3gP6pjXM4/hqdefault.jpg)](https://youtu.be/3V3gP6pjXM4 "MCI | App | Workshop: Snakes On A Phone 04")
+[![MCI - App - Workshop: Snakes On A Phone 04](https://img.youtube.com/vi/3V3gP6pjXM4/hqdefault.jpg)](https://youtu.be/3V3gP6pjXM4 "MCI - App - Workshop: Snakes On A Phone 04")
 
 Final view
 ====================
