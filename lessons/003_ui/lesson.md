@@ -264,12 +264,13 @@ Now that we have the rows of the table in place, let's place the widgets. The ``
 Some of our rows have 2 columns, while the "Height" input row has **one extra column**. We have to be careful to add **the same number of child widgets** to each row. So when we want to have an empty space somewhere, we add a `Space` (Palette: Layouts) widget instead.
 
 > Keep adding widgets into your layout according so that it corresponds to the following table:
-> |        | Column1      |      Column2  |      Column3 |
-> |--------|:-------------|:---------------|:-------------|
-> |**Row1**| ``TextView`` | ``EditText`` (Plain Text) | ``Space``    |
-> |**Row2**| ``TextView`` | ``EditText`` (Date) | ``Space``    |
-> |**Row3**| ``TextView`` | ``EditText`` (Number(Decimal)) | ``TextView`` |
-> |**Row4**| ``TextView`` | ``EditText`` (Email) | ``Space``    |
+
+|        | Column1      |      Column2  |      Column3 |
+|--------|:-------------|:---------------|:-------------|
+|**Row1**| ``TextView`` | ``EditText`` (Plain Text) | ``Space``    |
+|**Row2**| ``TextView`` | ``EditText`` (Date) | ``Space``    |
+|**Row3**| ``TextView`` | ``EditText`` (Number(Decimal)) | ``TextView`` |
+|**Row4**| ``TextView`` | ``EditText`` (Email) | ``Space``    |
 
 
 Notice that ``EditText`` takes many specialized forms that differ in the type of text that a user can enter into it, as well as the type of keyboard that is shown to the user. You can find all the available forms in the palette in the "Text" section.
