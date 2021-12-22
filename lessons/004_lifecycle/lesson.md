@@ -9,6 +9,8 @@
 
 In the Android ecosystem, each screen you see is an `Activity`. An `Activity` can belong to your app (e.g. a **highscore screen** or a **graph display**)  or it can be a system screen (e.g. **phone dialer**, **system settings**).
 
+![Examples of Activities](../../assets/img/004_lifecycle/example_activities.png)
+
 As a user navigates through, out of, and back to your app, the ``Activity`` instances in your app **transition through different states** in their lifecycle. The ``Activity`` class provides a number of **lifecycle methods** that allow the activity to know that a state has changed: that the system is creating, stopping, or resuming an activity, or destroying the process in which the activity resides. 
 
 ## Life Cycle Methods
