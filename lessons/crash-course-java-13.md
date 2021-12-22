@@ -9,7 +9,6 @@ Up until this point, we used the `+` operator to concatenate two ``String`` obje
 
 ````java
 int answer = 42;
-
 System.out.println("The Answer to the Ultimate Question of Life, the Universe, and Everything is " + answer)
 ````
 ````plaintext
@@ -55,7 +54,7 @@ String s = String.format("%s = %d", "joe", 35);
 // s contains "joe = 35"
 ````
 
-This provides better flexibility and customization options. `String.format(...)` results in a `String` value being created. If we want to print text to the console instead, `System.out.printf(...)` can be used instead.
+This provides better flexibility and customization options. `String.format(...)` results in a `String` value being created. If we want to print text directly to the console, `System.out.printf(...)` can be used instead.
 
 ````java
 String s = String.format("%s = %d", "joe", 35);
@@ -100,7 +99,7 @@ Flags modify the style, the `width` parameter determines the digits before the d
 |---------|-------------|
 | `-`     | The result will be left-justified.
 | `+`     | The result will always include a sign.
-| ` ` (space)    | The result will include a leading space for positive values.
+| <code>&nbsp;</code> (space)    | The result will include a leading space for positive values.
 | `0`     | The result will be zero-padded.
 
 ### Examples
@@ -158,7 +157,7 @@ System.out.printf("%d EUR\n%d EUR\n", 123, -123);
 -123 EUR
 ````
 
-**Positive/Negative numbers (flag ` `)**
+**Positive/Negative numbers (flag <code>&nbsp;</code>)**
 ````java
 System.out.printf("% d EUR\n% d EUR\n", 123, -123);
 ````
