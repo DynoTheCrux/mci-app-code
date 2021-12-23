@@ -106,6 +106,12 @@ Flags modify the style, the `width` parameter determines the digits before the d
 
 [>Try it yourself<](https://replit.com/@m0stlyharmless/MCIAppExStringFormat){:target="_blank"}
 
+````java
+int h = 2;
+int m = 35;
+double s = 4.42;
+````
+
 **Precision for floating point numbers**
 ````java
 System.out.printf("%s finished the race in %d hours, %d minutes and %.1f seconds.\n", "Alice", h, m, s);
