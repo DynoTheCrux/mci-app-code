@@ -104,40 +104,71 @@ Flags modify the style, the `width` parameter determines the digits before the d
 
 ### Examples
 
+[>Try it yourself<](https://replit.com/@m0stlyharmless/MCIAppExStringFormat){:target="_blank"}
+
 **Precision for floating point numbers**
 ````java
+System.out.printf("%s finished the race in %d hours, %d minutes and %.1f seconds.\n", "Alice", h, m, s);
 System.out.printf("%s finished the race in %d hours, %d minutes and %.2f seconds.\n", "Alice", h, m, s);
 ````
 ````plaintext
+Alice finished the race in 2 hours, 35 minutes and 4.4 seconds.
 Alice finished the race in 2 hours, 35 minutes and 4.42 seconds.
 ````
 
-**Width parameter**
+**Width parameter (8)**
 ````java
 System.out.println("Alice finished the race in");
-System.out.printf("%6d hours\n", h);
-System.out.printf("%6d minutes\n", m);
-System.out.printf("%6.2f seconds\n", s);
+System.out.printf("%8d hours\n", h);
+System.out.printf("%80d minutes\n", m);
+System.out.printf("%8.2f seconds\n", s);
 ````
 ````plaintext
 Alice finished the race in
-     2 hours
-    35 minutes
-  4.42 seconds
+       2 hours
+      35 minutes
+    4.42 seconds
+````
+**Width parameter (4)**
+````java
+System.out.println("Alice finished the race in");
+System.out.printf("%4d hours\n", h);
+System.out.printf("%4d minutes\n", m);
+System.out.printf("%4.2f seconds\n", s);
+````
+````plaintext
+Alice finished the race in
+   2 hours
+  35 minutes
+4.42 seconds
 ````
 
 **Left align (flag `-`)**
 ````java
 System.out.println("Alice finished the race in");
-System.out.printf("%-6d hours\n", h);
-System.out.printf("%-6d minutes\n", m);
-System.out.printf("%-6.2f seconds\n", s);
+System.out.printf("%-4d hours\n", h);
+System.out.printf("%-4d minutes\n", m);
+System.out.printf("%-4.2f seconds\n", s);
 ````
 ````plaintext
 Alice finished the race in
-2      hours
-35     minutes
-4.42   seconds
+2    hours
+35   minutes
+4.42 seconds
+````
+
+**Zero padded width (flag `0`)**
+````java
+System.out.println("Alice finished the race in");
+System.out.printf("%04d hours\n", h);
+System.out.printf("%04d minutes\n", m);
+System.out.printf("%04.2f seconds\n", s);
+````
+````plaintext
+Alice finished the race in
+0002 hours
+0035 minutes
+4.42 seconds
 ````
 
 **Zero padded width (flag `0`)**
