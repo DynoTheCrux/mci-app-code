@@ -89,7 +89,7 @@ Alice finished the race in 2 hours, 35 minutes and 4.420000 seconds.
 
 The formatting of numbers, especially floating point numbers, can be adjusted further using the general syntax
 
-````plaintext
+````
 %[flags][width][.precision]conversion
 ````
 
