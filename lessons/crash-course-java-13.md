@@ -93,7 +93,7 @@ The formatting of numbers, especially floating point numbers, can be adjusted fu
 %[flags][width][.precision]conversion
 ````
 
-Flags modify the style, the `width` parameter determines the digits before the decimal point, the `precision` parameter determines the precision (digits after the decimal point).
+Flags modify the style, the `width` parameter determines the minimum total number of digits, the `precision` parameter determines the precision (digits after the decimal point).
 
 | Flag    | Description |
 |---------|-------------|

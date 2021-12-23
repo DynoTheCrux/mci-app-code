@@ -203,8 +203,6 @@ class Main {
 
 >Note that the order of the elements is **not retained** in a ``HashSet``.
 
->You can use the ``size()`` method to get the number of elements in the ``HashSet``.
-
 ### LinkedHashSet
 
 The ``HashSet`` class does not automatically retain the order of the elements as they're added. To order the elements, use a ``LinkedHashSet``, which maintains a linked list of the set's elements in the order in which they were inserted.
