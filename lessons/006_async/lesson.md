@@ -212,7 +212,7 @@ You may want to use a `ConstraintLayout` as root layout (you don't have to!) and
 > Build a layout similar to this \
 > ![Dialog layout](../../assets/img/006_async/dialog_layout.png)
 
-> At the minimum, you need two ``EditText`` widgets with the ``id``s `editArtist` and `editTitle`.
+> At the minimum, you need two ``EditText`` widgets with the ``id``s `editArtist` and `editTitle`.\
 > ![Dialog component tree](../../assets/img/006_async/component_tree_dialog.png)
 
 Once we have a suitable layout, we need to tell our dialog builder to use this layout for our input dialog. This can be achieved with the builder's `setView` method (instead of ``setMessage``).
