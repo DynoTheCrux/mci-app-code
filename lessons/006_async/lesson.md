@@ -168,11 +168,11 @@ Let's add buttons to the dialog.
 
 To showcase the buttons, we will have a look at some new possibilities to show information to the user: ``Toast`` and ``Snackbar``.
 
->`Toast`s are short-lived, non-interactive, floating bubbles that contain text.
+>`Toast`s are short-lived, non-interactive, floating bubbles that contain text.\
 >![Toast](../../assets/img/006_async/toast.png)
 
 
->`Snackbar`s in contrast can be shown indefinitely and may optionally be interactive.
+>`Snackbar`s in contrast can be shown indefinitely and may optionally be interactive.\
 >![Snackbar](../../assets/img/006_async/snackbar.png)
 
 When the user clicks on the "Cancel" button, let's show a ``Toast`` that says "Lookup cancelled".
