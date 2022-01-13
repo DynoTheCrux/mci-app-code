@@ -287,7 +287,9 @@ It provides the method `doInBackground` for performing work in the background as
 
 ## Module lyricsfetcher
 
-Before we continue, we have to download the module "lyricsfetcher" from [Sakai](https://sakai.mci4me.at/access/content/group/Course-ID-SLVA-34457/AndroidModules/lyricsfetcher.zip) and import it into our project. Unzip it.
+Before we continue, we have to download the module "lyricsfetcher" from **Sakai/Resources/AndroidModules** and import it into our project.
+
+Unzip it.
 
 > "File > New > Import Module..." and select the "lyricsfetcher" folder.
 
